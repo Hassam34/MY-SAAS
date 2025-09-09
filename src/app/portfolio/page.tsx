@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "A selection of projects delivered by MySaaS.",
+  description: "A selection of projects delivered by MIRSSA TECH LTD.",
 };
 export default function PortfolioPage() {
   return (

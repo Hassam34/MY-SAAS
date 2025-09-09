@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "MySaaS builds modern web applications. Explore our portfolio and get in touch.",
+  description: "MIRSSA TECH LTD builds modern web applications. Explore our portfolio and get in touch.",
 };
 export default function Home() {
   return (
