@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact MySaaS to start your next web project.",
+};
 "use client";
 
 import { useState } from "react";

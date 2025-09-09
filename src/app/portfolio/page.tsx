@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "A selection of projects delivered by MySaaS.",
+};
 export default function PortfolioPage() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">

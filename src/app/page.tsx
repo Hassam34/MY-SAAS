@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "MySaaS builds modern web applications. Explore our portfolio and get in touch.",
+};
 export default function Home() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
