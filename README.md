@@ -9,8 +9,8 @@ A Next.js (App Router) website to showcase portfolio projects and allow clients 
 
 ### Run locally
 ```bash
-npm install
-npm run dev
+yarn
+yarn dev
 # open http://localhost:3000
 ```
 
