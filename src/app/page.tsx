@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Build your product with MySaaS</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Build your product with MIRSSA TECH LTD</h1>
       <p className="text-black/70 dark:text-white/70 max-w-2xl mb-8">
         We design and develop web apps for startups and enterprises. Explore our portfolio and get in touch to start your project.
       </p>

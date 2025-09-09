@@ -1,4 +1,4 @@
-## MySaaS – Portfolio and Contact Website
+## MIRSSA TECH LTD – Portfolio and Contact Website
 
 A Next.js (App Router) website to showcase portfolio projects and allow clients to contact us.
 
