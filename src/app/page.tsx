@@ -3,8 +3,29 @@ import Link from "next/link";
 import ServicesCircle from "../components/ServicesCircle";
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "MIRSSA TECH LTD builds modern web applications. Explore our portfolio and get in touch.",
+  title: "Digital Transformation & Technology Solutions",
+  description: "MIRSSA TECH LTD is a leading digital transformation company offering AI/ML, data analytics, web development, mobile apps, and enterprise solutions. Transform your business with cutting-edge technology.",
+  keywords: [
+    "digital transformation",
+    "AI machine learning", 
+    "data analytics",
+    "web development",
+    "mobile app development",
+    "enterprise solutions",
+    "business automation",
+    "technology consulting",
+    "MIRSSA TECH"
+  ],
+  openGraph: {
+    title: "MIRSSA TECH LTD - Digital Transformation & Technology Solutions",
+    description: "Leading digital transformation company offering AI/ML, data analytics, web development, mobile apps, and enterprise solutions.",
+    images: ["/mirssa_tech.png"],
+  },
+  twitter: {
+    title: "MIRSSA TECH LTD - Digital Transformation & Technology Solutions", 
+    description: "Leading digital transformation company offering AI/ML, data analytics, web development, mobile apps, and enterprise solutions.",
+    images: ["/mirssa_tech.png"],
+  },
 };
 
 export default function Home() {

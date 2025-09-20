@@ -22,40 +22,90 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "MIRSSA TECH LTD — Web App Design & Development",
+    default: "MIRSSA TECH LTD — Digital Transformation & Technology Solutions",
     template: "%s | MIRSSA TECH LTD",
   },
-  description: "We build modern web apps for startups and enterprises. Explore our portfolio and contact us to start your project.",
+  description: "Leading digital transformation company offering AI/ML, data analytics, web development, mobile apps, and enterprise solutions. Transform your business with cutting-edge technology.",
   applicationName: "MIRSSA TECH LTD",
   keywords: [
+    "digital transformation",
+    "AI machine learning",
+    "data analytics",
     "web development",
+    "mobile app development",
+    "enterprise solutions",
+    "business automation",
+    "cloud solutions",
+    "innovation technology",
     "next.js",
     "react",
     "tailwind",
     "saas",
     "portfolio",
     "agency",
+    "MIRSSA TECH",
+    "technology consulting",
+    "software development",
+    "business intelligence",
+    "emerging technology"
   ],
-  authors: [{ name: "MIRSSA TECH LTD" }],
+  authors: [{ name: "MIRSSA TECH LTD", url: "https://mirssatech.com" }],
+  creator: "MIRSSA TECH LTD",
+  publisher: "MIRSSA TECH LTD",
+  category: "Technology",
+  classification: "Business",
   openGraph: {
     type: "website",
-    title: "MIRSSA TECH LTD — Web App Design & Development",
-    description:
-      "We build modern web apps for startups and enterprises. Explore our portfolio and contact us to start your project.",
+    title: "MIRSSA TECH LTD — Digital Transformation & Technology Solutions",
+    description: "Leading digital transformation company offering AI/ML, data analytics, web development, mobile apps, and enterprise solutions. Transform your business with cutting-edge technology.",
     url: "/",
     siteName: "MIRSSA TECH LTD",
+    locale: "en_US",
+    images: [
+      {
+        url: "/mirssa_tech.png",
+        width: 1200,
+        height: 630,
+        alt: "MIRSSA TECH LTD - Digital Transformation Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MIRSSA TECH LTD — Web App Design & Development",
-    description:
-      "We build modern web apps for startups and enterprises. Explore our portfolio and contact us to start your project.",
+    title: "MIRSSA TECH LTD — Digital Transformation & Technology Solutions",
+    description: "Leading digital transformation company offering AI/ML, data analytics, web development, mobile apps, and enterprise solutions.",
     creator: "@mirssatech",
+    images: ["/mirssa_tech.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
+  },
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "/apple-touch-icon-precomposed.png",
+    },
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -65,6 +115,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to external domains for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* DNS prefetch for faster loading */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
+        {/* Theme color for mobile browsers */}
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        
+        {/* Additional meta tags */}
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="MIRSSA TECH" />
+        
+        {/* Geo tags */}
+        <meta name="geo.region" content="GB" />
+        <meta name="geo.placename" content="United Kingdom" />
+        
+        {/* Business information */}
+        <meta name="rating" content="general" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        
+        {/* Rich snippets preparation */}
+        <meta property="business:contact_data:country_name" content="United Kingdom" />
+        <meta property="business:contact_data:email" content="info@mirssatech.com" />
+        <meta property="business:contact_data:website" content="https://mirssatech.com" />
+      </head>
       <body
         className={`${inter.variable} ${poppins.variable} font-sans antialiased`}
       >
@@ -76,8 +159,66 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "MIRSSA TECH LTD",
+              alternateName: "MIRSSA TECH",
               url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-              sameAs: [],
+              logo: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/mirssa_tech.png`,
+              description: "Leading digital transformation company offering AI/ML, data analytics, web development, mobile apps, and enterprise solutions.",
+              foundingDate: "2020",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "UK"
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                email: "info@mirssatech.com",
+                url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/contact`
+              },
+              sameAs: [
+                "https://twitter.com/mirssatech",
+                "https://linkedin.com/company/mirssatech"
+              ],
+              services: [
+                "Digital Transformation",
+                "AI & Machine Learning",
+                "Data Analytics",
+                "Web Development", 
+                "Mobile App Development",
+                "Enterprise Solutions",
+                "Business Automation",
+                "Innovation Technology"
+              ],
+              areaServed: "Worldwide",
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Digital Transformation Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Digital Transformation",
+                      description: "Transform your business with cutting-edge digital solutions"
+                    }
+                  },
+                  {
+                    "@type": "Offer", 
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI & Machine Learning",
+                      description: "Harness the power of artificial intelligence and machine learning"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service", 
+                      name: "Enterprise Data & Analytics",
+                      description: "Transform your data into actionable insights"
+                    }
+                  }
+                ]
+              }
             }),
           }}
         />

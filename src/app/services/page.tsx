@@ -2,8 +2,30 @@ import Link from 'next/link';
 import servicesData from '../../data/services.json';
 
 export const metadata = {
-  title: 'Our Services | MIRSSA TECH LTD',
-  description: 'Comprehensive digital transformation, AI/ML, and data analytics services to accelerate your business growth.',
+  title: 'Our Services - Digital Transformation & Technology Solutions',
+  description: 'Comprehensive digital transformation, AI/ML, data analytics, web development, mobile apps, and enterprise solutions to accelerate your business growth and drive innovation.',
+  keywords: [
+    'digital transformation services',
+    'AI machine learning solutions',
+    'enterprise data analytics', 
+    'business solutions',
+    'innovation technology',
+    'mobile app development',
+    'web development services',
+    'technology consulting',
+    'business automation',
+    'MIRSSA TECH services'
+  ],
+  openGraph: {
+    title: 'Our Services - MIRSSA TECH LTD Digital Solutions',
+    description: 'Comprehensive digital transformation, AI/ML, data analytics, web development, mobile apps, and enterprise solutions.',
+    images: ['/mirssa_tech.png'],
+  },
+  twitter: {
+    title: 'Our Services - MIRSSA TECH LTD Digital Solutions',
+    description: 'Comprehensive digital transformation, AI/ML, data analytics, web development, mobile apps, and enterprise solutions.',
+    images: ['/mirssa_tech.png'],
+  },
 };
 
 export default function ServicesPage() {
