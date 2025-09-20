@@ -17,8 +17,8 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
-              Ready to start your next project? We'd love to hear from you. 
-              Send us a message and we'll respond as soon as possible.
+              Ready to start your next project? We&apos;d love to hear from you. 
+              Send us a message and we&apos;ll respond as soon as possible.
             </p>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function ContactPage() {
                   Contact Information
                 </h2>
                 <p className="text-gray-700 mb-8 font-inter">
-                  We're here to help and answer any question you might have. 
+                  We&apos;re here to help and answer any question you might have. 
                   We look forward to hearing from you.
                 </p>
               </div>

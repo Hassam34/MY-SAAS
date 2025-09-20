@@ -68,7 +68,7 @@ export default function PortfolioPage() {
               Our Portfolio
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
-              A showcase of our latest projects and the innovative solutions we've delivered 
+              A showcase of our latest projects and the innovative solutions we&apos;ve delivered 
               for clients across various industries.
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function PortfolioPage() {
             Ready to start your project?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto font-inter">
-            Let's discuss your requirements and create something amazing together.
+            Let&apos;s discuss your requirements and create something amazing together.
           </p>
           <Link 
             href="/contact" 

@@ -22,7 +22,7 @@ export default function ContactForm() {
       });
       const data = await res.json();
       setStatus(data?.message ?? (res.ok ? "Message sent successfully!" : "Error sending message"));
-    } catch (error) {
+    } catch {
       setStatus("Error sending message. Please try again.");
     } finally {
       setIsSubmitting(false);

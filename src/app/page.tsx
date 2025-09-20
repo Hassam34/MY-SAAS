@@ -24,7 +24,7 @@ export default function Home() {
               <span className="block text-blue-600">digital business</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8 font-inter">
-              As an industry pioneer and one of the world's most experienced web development teams, 
+              As an industry pioneer and one of the world&apos;s most experienced web development teams, 
               MIRSSA TECH LTD offers both public and private web solutions - a perfect combination 
               of flexibility and security for global enterprises.
             </p>
@@ -106,7 +106,7 @@ export default function Home() {
             Ready to build your next project?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto font-inter">
-            Let's discuss your requirements and create something amazing together.
+            Let&apos;s discuss your requirements and create something amazing together.
           </p>
           <Link 
             href="/contact" 
