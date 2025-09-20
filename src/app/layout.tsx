@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Logo from "../components/Logo";
+import ServicesDropdown from "../components/ServicesDropdown";
+import MobileServices from "../components/MobileServices";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -94,9 +96,7 @@ export default function RootLayout({
                   <Link href="/portfolio" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
                     Portfolio
                   </Link>
-                  <Link href="/services" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                    Services
-                  </Link>
+                  <ServicesDropdown />
                   <Link href="/contact" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
                     Contact
                   </Link>
@@ -131,16 +131,14 @@ export default function RootLayout({
             
             {/* Mobile menu */}
             <div className="md:hidden hidden" id="mobile-menu">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200 max-h-[calc(100vh-4rem)] overflow-y-auto">
                 <Link href="/" className="text-black hover:text-blue-600 block px-3 py-2 text-base font-medium">
                   Home
                 </Link>
                 <Link href="/portfolio" className="text-black hover:text-blue-600 block px-3 py-2 text-base font-medium">
                   Portfolio
                 </Link>
-                <Link href="/services" className="text-black hover:text-blue-600 block px-3 py-2 text-base font-medium">
-                  Services
-                </Link>
+                <MobileServices />
                 <Link href="/contact" className="text-black hover:text-blue-600 block px-3 py-2 text-base font-medium">
                   Contact
                 </Link>
