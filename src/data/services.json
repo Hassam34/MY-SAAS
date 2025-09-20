@@ -1,0 +1,1018 @@
+{
+  "serviceCategories": [
+    {
+      "id": "digital-transformation",
+      "name": "Digital Transformation",
+      "slug": "digital-transformation",
+      "description": "Transform your business with cutting-edge digital solutions that drive growth, efficiency, and innovation.",
+      "image": "/images/services/digital-transformation.jpg",
+      "icon": "📊",
+      "color": "border-l-purple-500",
+      "bgColor": "bg-purple-50",
+      "overview": "Digital transformation is more than just adopting new technology—it's about fundamentally changing how your business operates and delivers value to customers. Our comprehensive approach helps organizations reimagine their processes, culture, and customer experiences through strategic digital initiatives.",
+      "benefits": [
+        "Increased operational efficiency by 40-60%",
+        "Enhanced customer experience and satisfaction",
+        "Improved data-driven decision making",
+        "Greater agility and market responsiveness",
+        "Reduced operational costs and waste"
+      ],
+      "services": [
+        {
+          "id": "discovery-strategy",
+          "name": "Discovery & Strategy",
+          "slug": "discovery-strategy",
+          "description": "Comprehensive analysis and strategic planning to identify digital transformation opportunities and create actionable roadmaps.",
+          "detailedDescription": "Our Discovery & Strategy service is the foundation of successful digital transformation. We conduct thorough assessments of your current technology landscape, business processes, and organizational capabilities to identify transformation opportunities that deliver maximum value.",
+          "features": [
+            "Current State Assessment",
+            "Future State Visioning",
+            "Gap Analysis & Prioritization",
+            "Digital Roadmap Development",
+            "ROI Analysis & Business Case",
+            "Change Management Planning"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Business Assessment",
+              "description": "Comprehensive evaluation of current processes, technology, and capabilities"
+            },
+            {
+              "step": 2,
+              "title": "Opportunity Identification",
+              "description": "Identify high-value transformation opportunities aligned with business goals"
+            },
+            {
+              "step": 3,
+              "title": "Strategy Development",
+              "description": "Create detailed digital transformation strategy and roadmap"
+            },
+            {
+              "step": 4,
+              "title": "Implementation Planning",
+              "description": "Develop actionable implementation plan with timelines and milestones"
+            }
+          ],
+          "deliverables": [
+            "Digital Transformation Strategy Document",
+            "Technology Roadmap",
+            "Implementation Timeline",
+            "ROI Analysis Report",
+            "Change Management Plan"
+          ],
+          "timeline": "4-8 weeks",
+          "pricing": "Starting from $15,000"
+        },
+        {
+          "id": "foundation-setup",
+          "name": "Foundation Setup",
+          "slug": "foundation-setup",
+          "description": "Establish robust technological foundations and infrastructure to support your digital transformation journey.",
+          "detailedDescription": "Foundation Setup ensures your organization has the technological infrastructure and capabilities needed for successful digital transformation. We focus on creating scalable, secure, and flexible foundations that can grow with your business.",
+          "features": [
+            "Cloud Infrastructure Setup",
+            "Data Architecture Design",
+            "Security Framework Implementation",
+            "Integration Platform Setup",
+            "Governance & Compliance Framework",
+            "Performance Monitoring Systems"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Infrastructure Assessment",
+              "description": "Evaluate current infrastructure and identify requirements"
+            },
+            {
+              "step": 2,
+              "title": "Architecture Design",
+              "description": "Design scalable and secure technology architecture"
+            },
+            {
+              "step": 3,
+              "title": "Implementation",
+              "description": "Set up infrastructure, platforms, and foundational systems"
+            },
+            {
+              "step": 4,
+              "title": "Testing & Optimization",
+              "description": "Comprehensive testing and performance optimization"
+            }
+          ],
+          "deliverables": [
+            "Cloud Infrastructure",
+            "Data Architecture Documentation",
+            "Security Implementation",
+            "Integration Platform",
+            "Monitoring Dashboard"
+          ],
+          "timeline": "6-12 weeks",
+          "pricing": "Starting from $25,000"
+        }
+      ]
+    },
+    {
+      "id": "ai-machine-learning",
+      "name": "AI & Machine Learning",
+      "slug": "ai-machine-learning", 
+      "description": "Harness the power of artificial intelligence and machine learning to automate processes, gain insights, and drive innovation.",
+      "image": "/images/services/ai-ml.jpg",
+      "icon": "🤖",
+      "color": "border-l-blue-500",
+      "bgColor": "bg-blue-50",
+      "overview": "Artificial Intelligence and Machine Learning are transforming industries by enabling intelligent automation, predictive analytics, and enhanced decision-making. Our AI/ML solutions help businesses unlock the value of their data and create competitive advantages through intelligent systems.",
+      "benefits": [
+        "Automated decision-making processes",
+        "Predictive insights and forecasting",
+        "Enhanced customer personalization",
+        "Improved operational efficiency",
+        "Advanced data analytics capabilities"
+      ],
+      "services": [
+        {
+          "id": "machine-learning",
+          "name": "Machine Learning Models",
+          "slug": "machine-learning",
+          "description": "Custom machine learning models designed to solve specific business problems and drive intelligent automation.",
+          "detailedDescription": "Our Machine Learning Models service focuses on developing custom ML solutions that address your specific business challenges. From predictive analytics to classification systems, we build models that learn from your data and improve over time.",
+          "features": [
+            "Custom Model Development",
+            "Predictive Analytics",
+            "Classification & Clustering",
+            "Recommendation Systems",
+            "Anomaly Detection",
+            "Model Optimization & Tuning"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Problem Definition",
+              "description": "Clearly define the business problem and success metrics"
+            },
+            {
+              "step": 2,
+              "title": "Data Preparation",
+              "description": "Clean, prepare, and engineer features from your data"
+            },
+            {
+              "step": 3,
+              "title": "Model Development",
+              "description": "Develop and train machine learning models"
+            },
+            {
+              "step": 4,
+              "title": "Deployment & Monitoring",
+              "description": "Deploy models and set up monitoring systems"
+            }
+          ],
+          "deliverables": [
+            "Trained ML Models",
+            "Model Documentation",
+            "Deployment Pipeline",
+            "Performance Monitoring Dashboard",
+            "Model Maintenance Plan"
+          ],
+          "timeline": "8-16 weeks",
+          "pricing": "Starting from $30,000"
+        },
+        {
+          "id": "nlp",
+          "name": "Natural Language Processing",
+          "slug": "nlp",
+          "description": "Advanced NLP solutions for text analysis, sentiment analysis, chatbots, and language understanding applications.",
+          "detailedDescription": "Natural Language Processing enables computers to understand, interpret, and generate human language. Our NLP solutions help businesses extract insights from text data, automate customer interactions, and improve communication.",
+          "features": [
+            "Text Analytics & Mining",
+            "Sentiment Analysis",
+            "Chatbot Development",
+            "Language Translation",
+            "Document Processing",
+            "Voice Recognition Systems"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Use Case Analysis",
+              "description": "Identify specific NLP applications for your business"
+            },
+            {
+              "step": 2,
+              "title": "Data Collection",
+              "description": "Gather and prepare text data for processing"
+            },
+            {
+              "step": 3,
+              "title": "Model Training",
+              "description": "Train NLP models using advanced algorithms"
+            },
+            {
+              "step": 4,
+              "title": "Integration",
+              "description": "Integrate NLP capabilities into your systems"
+            }
+          ],
+          "deliverables": [
+            "NLP Processing Engine",
+            "Custom Language Models",
+            "API Integration",
+            "Analytics Dashboard",
+            "Documentation & Training"
+          ],
+          "timeline": "6-12 weeks",
+          "pricing": "Starting from $25,000"
+        },
+        {
+          "id": "computer-vision",
+          "name": "Computer Vision",
+          "slug": "computer-vision",
+          "description": "Computer vision solutions for image recognition, object detection, and visual analytics applications.",
+          "detailedDescription": "Computer Vision enables machines to interpret and understand visual information from the world. Our solutions help businesses automate visual inspection, enhance security, and extract insights from images and videos.",
+          "features": [
+            "Image Recognition & Classification",
+            "Object Detection & Tracking",
+            "Facial Recognition Systems",
+            "Quality Control Automation",
+            "Medical Image Analysis",
+            "Video Analytics"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Requirements Analysis",
+              "description": "Define visual recognition requirements and use cases"
+            },
+            {
+              "step": 2,
+              "title": "Data Collection",
+              "description": "Gather and annotate image/video datasets"
+            },
+            {
+              "step": 3,
+              "title": "Model Development",
+              "description": "Train computer vision models"
+            },
+            {
+              "step": 4,
+              "title": "Deployment",
+              "description": "Deploy models for real-time processing"
+            }
+          ],
+          "deliverables": [
+            "Computer Vision Models",
+            "Real-time Processing System",
+            "Analytics Dashboard",
+            "Mobile/Web Integration",
+            "Performance Reports"
+          ],
+          "timeline": "8-14 weeks",
+          "pricing": "Starting from $35,000"
+        },
+        {
+          "id": "consulting",
+          "name": "AI Strategy & Consulting",
+          "slug": "consulting",
+          "description": "Strategic AI consulting to help organizations develop comprehensive AI strategies and implementation roadmaps.",
+          "detailedDescription": "AI Strategy & Consulting helps organizations understand how artificial intelligence can transform their business. We provide strategic guidance, feasibility assessments, and implementation roadmaps to ensure successful AI adoption.",
+          "features": [
+            "AI Readiness Assessment",
+            "Use Case Identification",
+            "Technology Strategy",
+            "Vendor Evaluation",
+            "Implementation Roadmap",
+            "ROI Analysis"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Current State Assessment",
+              "description": "Evaluate existing capabilities and data readiness"
+            },
+            {
+              "step": 2,
+              "title": "Opportunity Mapping",
+              "description": "Identify high-value AI use cases"
+            },
+            {
+              "step": 3,
+              "title": "Strategy Development",
+              "description": "Create comprehensive AI strategy and roadmap"
+            },
+            {
+              "step": 4,
+              "title": "Implementation Planning",
+              "description": "Develop detailed implementation plan"
+            }
+          ],
+          "deliverables": [
+            "AI Strategy Document",
+            "Implementation Roadmap",
+            "Technology Recommendations",
+            "ROI Analysis",
+            "Training Program"
+          ],
+          "timeline": "4-8 weeks",
+          "pricing": "Starting from $20,000"
+        },
+        {
+          "id": "custom-solutions",
+          "name": "Custom AI Solutions",
+          "slug": "custom-solutions",
+          "description": "Tailored AI solutions designed to meet specific business requirements and industry challenges.",
+          "detailedDescription": "Custom AI Solutions are designed to address unique business challenges that require specialized artificial intelligence capabilities. We work closely with clients to develop bespoke AI systems that fit their specific needs and industry requirements.",
+          "features": [
+            "Custom Algorithm Development",
+            "Industry-Specific Solutions",
+            "End-to-End AI Systems",
+            "Legacy System Integration",
+            "Scalable AI Platforms",
+            "Ongoing Support & Maintenance"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Requirements Gathering",
+              "description": "Detailed analysis of business requirements and constraints"
+            },
+            {
+              "step": 2,
+              "title": "Solution Design",
+              "description": "Design custom AI architecture and algorithms"
+            },
+            {
+              "step": 3,
+              "title": "Development",
+              "description": "Build and test custom AI solution"
+            },
+            {
+              "step": 4,
+              "title": "Deployment & Support",
+              "description": "Deploy solution and provide ongoing support"
+            }
+          ],
+          "deliverables": [
+            "Custom AI System",
+            "Source Code & Documentation",
+            "Deployment Guide",
+            "Training Materials",
+            "Support Plan"
+          ],
+          "timeline": "12-24 weeks",
+          "pricing": "Starting from $50,000"
+        }
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "name": "Enterprise Data & Analytics",
+      "slug": "data-analytics",
+      "description": "Transform your data into actionable insights with advanced analytics, business intelligence, and data science solutions.",
+      "image": "/images/services/data-analytics.jpg",
+      "icon": "📈",
+      "color": "border-l-green-500",
+      "bgColor": "bg-green-50",
+      "overview": "In today's data-driven world, organizations that can effectively collect, analyze, and act on data have a significant competitive advantage. Our Enterprise Data & Analytics solutions help businesses unlock the value of their data through advanced analytics, business intelligence, and data science capabilities.",
+      "benefits": [
+        "Data-driven decision making",
+        "Improved business performance insights",
+        "Predictive analytics capabilities",
+        "Enhanced operational efficiency",
+        "Better customer understanding"
+      ],
+      "services": [
+        {
+          "id": "data-management",
+          "name": "Data Management & Analytics",
+          "slug": "data-management",
+          "description": "Comprehensive data management solutions including data warehousing, ETL processes, and analytics platforms.",
+          "detailedDescription": "Data Management & Analytics provides the foundation for all data-driven initiatives. We help organizations collect, store, process, and analyze their data effectively, ensuring data quality, accessibility, and security.",
+          "features": [
+            "Data Warehouse Design",
+            "ETL/ELT Pipeline Development",
+            "Data Quality Management",
+            "Real-time Analytics",
+            "Data Governance Framework",
+            "Cloud Data Platforms"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Data Assessment",
+              "description": "Evaluate current data landscape and requirements"
+            },
+            {
+              "step": 2,
+              "title": "Architecture Design",
+              "description": "Design optimal data architecture and processes"
+            },
+            {
+              "step": 3,
+              "title": "Implementation",
+              "description": "Build data pipelines and analytics infrastructure"
+            },
+            {
+              "step": 4,
+              "title": "Optimization",
+              "description": "Optimize performance and implement governance"
+            }
+          ],
+          "deliverables": [
+            "Data Warehouse",
+            "ETL Pipelines",
+            "Analytics Platform",
+            "Data Governance Framework",
+            "Performance Dashboards"
+          ],
+          "timeline": "8-16 weeks",
+          "pricing": "Starting from $40,000"
+        },
+        {
+          "id": "business-intelligence",
+          "name": "Business Intelligence",
+          "slug": "business-intelligence",
+          "description": "Advanced BI solutions with interactive dashboards, reporting systems, and self-service analytics capabilities.",
+          "detailedDescription": "Business Intelligence transforms raw data into meaningful insights that drive strategic decision-making. Our BI solutions provide executives and teams with the tools they need to monitor performance, identify trends, and make data-driven decisions.",
+          "features": [
+            "Interactive Dashboards",
+            "Automated Reporting",
+            "Self-Service Analytics",
+            "KPI Monitoring",
+            "Data Visualization",
+            "Mobile BI Solutions"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Requirements Analysis",
+              "description": "Understand reporting and analytics requirements"
+            },
+            {
+              "step": 2,
+              "title": "Dashboard Design",
+              "description": "Design intuitive and informative dashboards"
+            },
+            {
+              "step": 3,
+              "title": "Development",
+              "description": "Build BI solutions and reporting systems"
+            },
+            {
+              "step": 4,
+              "title": "Training & Deployment",
+              "description": "Train users and deploy BI solutions"
+            }
+          ],
+          "deliverables": [
+            "BI Platform",
+            "Interactive Dashboards",
+            "Automated Reports",
+            "User Training",
+            "Documentation"
+          ],
+          "timeline": "6-12 weeks",
+          "pricing": "Starting from $25,000"
+        }
+      ]
+    },
+    {
+      "id": "enterprise-mobility",
+      "name": "Enterprise Mobility",
+      "slug": "enterprise-mobility",
+      "description": "Comprehensive mobile solutions including web development, native apps, and cross-platform development.",
+      "image": "/images/services/enterprise-mobility.jpg",
+      "icon": "📱",
+      "color": "border-l-orange-500",
+      "bgColor": "bg-orange-50",
+      "overview": "Enterprise Mobility solutions enable businesses to reach customers and empower employees through powerful mobile applications and web platforms. Our comprehensive approach covers everything from responsive web development to native mobile apps and progressive web applications.",
+      "benefits": [
+        "Enhanced customer engagement and accessibility",
+        "Improved employee productivity and mobility",
+        "Consistent user experience across all devices",
+        "Faster time-to-market for mobile initiatives",
+        "Scalable and maintainable mobile architecture"
+      ],
+      "services": [
+        {
+          "id": "web-development",
+          "name": "Web Development",
+          "slug": "web-development",
+          "description": "Modern, responsive web applications built with cutting-edge technologies for optimal performance and user experience.",
+          "detailedDescription": "Our Web Development service creates modern, responsive web applications that deliver exceptional user experiences across all devices. We use the latest technologies and best practices to build scalable, secure, and high-performing web solutions.",
+          "features": [
+            "Responsive Design",
+            "Progressive Web Apps (PWA)",
+            "Single Page Applications (SPA)",
+            "E-commerce Solutions",
+            "Content Management Systems",
+            "API Integration"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Requirements Gathering",
+              "description": "Understand business goals, user needs, and technical requirements"
+            },
+            {
+              "step": 2,
+              "title": "Design & Prototyping",
+              "description": "Create wireframes, mockups, and interactive prototypes"
+            },
+            {
+              "step": 3,
+              "title": "Development",
+              "description": "Build the application using modern frameworks and technologies"
+            },
+            {
+              "step": 4,
+              "title": "Testing & Deployment",
+              "description": "Comprehensive testing and deployment to production"
+            }
+          ],
+          "deliverables": [
+            "Responsive Web Application",
+            "Source Code & Documentation",
+            "Deployment Configuration",
+            "User Training Materials",
+            "Maintenance Plan"
+          ],
+          "timeline": "8-16 weeks",
+          "pricing": "Starting from $20,000"
+        },
+        {
+          "id": "mobile-apps",
+          "name": "Mobile App Development",
+          "slug": "mobile-apps",
+          "description": "Native and cross-platform mobile applications for iOS and Android with exceptional user experience.",
+          "detailedDescription": "Our Mobile App Development service creates high-quality native and cross-platform applications that provide seamless user experiences on both iOS and Android platforms. We focus on performance, usability, and scalability.",
+          "features": [
+            "Native iOS & Android Development",
+            "Cross-Platform Solutions",
+            "Offline Functionality",
+            "Push Notifications",
+            "App Store Optimization",
+            "Analytics Integration"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "App Strategy",
+              "description": "Define app objectives, target audience, and feature requirements"
+            },
+            {
+              "step": 2,
+              "title": "UI/UX Design",
+              "description": "Create intuitive and engaging mobile user interfaces"
+            },
+            {
+              "step": 3,
+              "title": "Development",
+              "description": "Build the application using platform-specific or cross-platform technologies"
+            },
+            {
+              "step": 4,
+              "title": "Testing & Launch",
+              "description": "Quality assurance testing and app store submission"
+            }
+          ],
+          "deliverables": [
+            "Mobile Application",
+            "App Store Listings",
+            "Source Code",
+            "Testing Reports",
+            "User Documentation"
+          ],
+          "timeline": "12-20 weeks",
+          "pricing": "Starting from $35,000"
+        }
+      ]
+    },
+    {
+      "id": "innovation-emerging-tech",
+      "name": "Innovation & Emerging Tech",
+      "slug": "innovation-emerging-tech",
+      "description": "Cutting-edge technologies including AR/VR, IoT, and emerging platforms to future-proof your business.",
+      "image": "/images/services/innovation-tech.jpg",
+      "icon": "🚀",
+      "color": "border-l-red-500",
+      "bgColor": "bg-red-50",
+      "overview": "Innovation & Emerging Technologies help businesses stay ahead of the curve by adopting cutting-edge solutions like Augmented Reality, Virtual Reality, Internet of Things, and other emerging platforms. We help organizations explore and implement tomorrow's technologies today.",
+      "benefits": [
+        "Competitive advantage through early adoption",
+        "Enhanced customer engagement and experiences",
+        "Operational efficiency through smart technologies",
+        "New revenue streams and business models",
+        "Future-proof technology infrastructure"
+      ],
+      "services": [
+        {
+          "id": "ar-vr",
+          "name": "Augmented & Virtual Reality",
+          "slug": "ar-vr",
+          "description": "Immersive AR and VR solutions for training, marketing, and customer engagement applications.",
+          "detailedDescription": "Our AR/VR solutions create immersive experiences that transform how businesses interact with customers and train employees. From virtual showrooms to interactive training simulations, we bring ideas to life through cutting-edge reality technologies.",
+          "features": [
+            "AR Mobile Applications",
+            "VR Training Simulations",
+            "3D Visualization",
+            "Virtual Showrooms",
+            "Mixed Reality Experiences",
+            "360° Content Creation"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Concept Development",
+              "description": "Define the AR/VR experience goals and user journey"
+            },
+            {
+              "step": 2,
+              "title": "3D Modeling & Design",
+              "description": "Create 3D assets and immersive environments"
+            },
+            {
+              "step": 3,
+              "title": "Development",
+              "description": "Build AR/VR applications using specialized platforms"
+            },
+            {
+              "step": 4,
+              "title": "Testing & Deployment",
+              "description": "Test across devices and deploy to target platforms"
+            }
+          ],
+          "deliverables": [
+            "AR/VR Application",
+            "3D Assets & Models",
+            "Deployment Package",
+            "User Guides",
+            "Performance Analytics"
+          ],
+          "timeline": "10-18 weeks",
+          "pricing": "Starting from $40,000"
+        },
+        {
+          "id": "iot-solutions",
+          "name": "IoT Platform Development",
+          "slug": "iot-solutions",
+          "description": "Internet of Things solutions connecting devices, sensors, and systems for smart automation and insights.",
+          "detailedDescription": "Our IoT Platform Development service creates connected ecosystems that enable smart automation, real-time monitoring, and data-driven insights. We help businesses leverage the Internet of Things to optimize operations and create new capabilities.",
+          "features": [
+            "Device Connectivity",
+            "Real-time Monitoring",
+            "Data Analytics Dashboard",
+            "Automated Alerts",
+            "Edge Computing",
+            "Cloud Integration"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "IoT Strategy",
+              "description": "Define IoT objectives and identify connected device requirements"
+            },
+            {
+              "step": 2,
+              "title": "Platform Architecture",
+              "description": "Design scalable IoT platform and data flow"
+            },
+            {
+              "step": 3,
+              "title": "Development & Integration",
+              "description": "Build platform and integrate with devices and sensors"
+            },
+            {
+              "step": 4,
+              "title": "Testing & Optimization",
+              "description": "Test connectivity and optimize performance"
+            }
+          ],
+          "deliverables": [
+            "IoT Platform",
+            "Device Integration",
+            "Analytics Dashboard",
+            "Mobile App",
+            "Documentation & Training"
+          ],
+          "timeline": "12-20 weeks",
+          "pricing": "Starting from $45,000"
+        }
+      ]
+    },
+    {
+      "id": "business-solutions",
+      "name": "Business Solutions",
+      "slug": "business-solutions",
+      "description": "Comprehensive business process automation, experience design, and enterprise application solutions.",
+      "image": "/images/services/business-solutions.jpg",
+      "icon": "⚙️",
+      "color": "border-l-indigo-500",
+      "bgColor": "bg-indigo-50",
+      "overview": "Business Solutions focus on optimizing operations, enhancing customer experiences, and building robust enterprise applications. We help organizations streamline processes, improve efficiency, and deliver exceptional experiences to customers and employees.",
+      "benefits": [
+        "Streamlined business processes and workflows",
+        "Enhanced customer satisfaction and loyalty",
+        "Improved operational efficiency and productivity",
+        "Reduced manual work and human errors",
+        "Scalable enterprise-grade applications"
+      ],
+      "services": [
+        {
+          "id": "process-automation",
+          "name": "Process Automation",
+          "slug": "process-automation",
+          "description": "Intelligent automation solutions to streamline workflows, reduce manual tasks, and improve efficiency.",
+          "detailedDescription": "Our Process Automation service transforms manual, time-consuming workflows into efficient, automated processes. We analyze existing workflows, identify automation opportunities, and implement solutions that reduce costs and improve accuracy.",
+          "features": [
+            "Workflow Analysis & Mapping",
+            "Robotic Process Automation (RPA)",
+            "Business Rules Engine",
+            "Document Management",
+            "Approval Workflows",
+            "Integration APIs"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Process Assessment",
+              "description": "Analyze current processes and identify automation opportunities"
+            },
+            {
+              "step": 2,
+              "title": "Solution Design",
+              "description": "Design automated workflows and integration points"
+            },
+            {
+              "step": 3,
+              "title": "Implementation",
+              "description": "Build and deploy automation solutions"
+            },
+            {
+              "step": 4,
+              "title": "Optimization",
+              "description": "Monitor performance and optimize automated processes"
+            }
+          ],
+          "deliverables": [
+            "Automated Workflows",
+            "RPA Bots",
+            "Process Documentation",
+            "Training Materials",
+            "Performance Metrics"
+          ],
+          "timeline": "8-14 weeks",
+          "pricing": "Starting from $30,000"
+        },
+        {
+          "id": "experience-design",
+          "name": "Experience Design",
+          "slug": "experience-design",
+          "description": "User-centered design solutions for digital products, focusing on usability and customer satisfaction.",
+          "detailedDescription": "Our Experience Design service creates intuitive, engaging, and accessible digital experiences. We use human-centered design principles to understand user needs and create solutions that delight customers and drive business results.",
+          "features": [
+            "User Research & Analysis",
+            "Information Architecture",
+            "UI/UX Design",
+            "Prototyping & Testing",
+            "Design Systems",
+            "Accessibility Compliance"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Research & Discovery",
+              "description": "Understand users, business goals, and market context"
+            },
+            {
+              "step": 2,
+              "title": "Design Strategy",
+              "description": "Define design principles and create user journey maps"
+            },
+            {
+              "step": 3,
+              "title": "Design & Prototyping",
+              "description": "Create designs and interactive prototypes"
+            },
+            {
+              "step": 4,
+              "title": "Testing & Refinement",
+              "description": "Test with users and refine the design"
+            }
+          ],
+          "deliverables": [
+            "Design System",
+            "UI/UX Designs",
+            "Interactive Prototypes",
+            "User Testing Reports",
+            "Design Guidelines"
+          ],
+          "timeline": "6-12 weeks",
+          "pricing": "Starting from $25,000"
+        },
+        {
+          "id": "enterprise-applications",
+          "name": "Enterprise Applications",
+          "slug": "enterprise-applications",
+          "description": "Custom enterprise software solutions designed to meet complex business requirements and scale with growth.",
+          "detailedDescription": "Our Enterprise Applications service builds robust, scalable software solutions that handle complex business processes and large-scale operations. We create custom applications that integrate with existing systems and grow with your business.",
+          "features": [
+            "Custom Software Development",
+            "Legacy System Integration",
+            "Scalable Architecture",
+            "Security & Compliance",
+            "Cloud Deployment",
+            "Performance Optimization"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Requirements Analysis",
+              "description": "Gather detailed business and technical requirements"
+            },
+            {
+              "step": 2,
+              "title": "Architecture Design",
+              "description": "Design scalable and secure application architecture"
+            },
+            {
+              "step": 3,
+              "title": "Development",
+              "description": "Build the application using enterprise-grade technologies"
+            },
+            {
+              "step": 4,
+              "title": "Deployment & Support",
+              "description": "Deploy to production and provide ongoing support"
+            }
+          ],
+          "deliverables": [
+            "Enterprise Application",
+            "Technical Documentation",
+            "Deployment Scripts",
+            "User Training",
+            "Support Plan"
+          ],
+          "timeline": "16-28 weeks",
+          "pricing": "Starting from $60,000"
+        }
+      ]
+    },
+    {
+      "id": "digital-marketing",
+      "name": "Digital Marketing",
+      "slug": "digital-marketing",
+      "description": "Comprehensive digital marketing solutions including SEO, social media, content marketing, and analytics.",
+      "image": "/images/services/digital-marketing.jpg",
+      "icon": "📈",
+      "color": "border-l-pink-500",
+      "bgColor": "bg-pink-50",
+      "overview": "Digital Marketing solutions help businesses reach their target audience, increase brand visibility, and drive growth through strategic online marketing initiatives. Our comprehensive approach covers all aspects of digital marketing from SEO to social media and analytics.",
+      "benefits": [
+        "Increased online visibility and brand awareness",
+        "Higher quality leads and conversions",
+        "Improved customer engagement and retention",
+        "Data-driven marketing insights",
+        "Better return on marketing investment"
+      ],
+      "services": [
+        {
+          "id": "seo-sem",
+          "name": "SEO & SEM",
+          "slug": "seo-sem",
+          "description": "Search engine optimization and marketing strategies to improve visibility and drive targeted traffic.",
+          "detailedDescription": "Our SEO & SEM service improves your online visibility through organic search optimization and strategic paid advertising. We help businesses rank higher in search results and drive qualified traffic that converts into customers.",
+          "features": [
+            "Technical SEO Audit",
+            "Keyword Research & Strategy",
+            "On-Page Optimization",
+            "Google Ads Management",
+            "Local SEO",
+            "Performance Tracking"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "SEO Audit",
+              "description": "Comprehensive analysis of current SEO performance"
+            },
+            {
+              "step": 2,
+              "title": "Strategy Development",
+              "description": "Create SEO/SEM strategy based on business goals"
+            },
+            {
+              "step": 3,
+              "title": "Implementation",
+              "description": "Execute optimization and launch advertising campaigns"
+            },
+            {
+              "step": 4,
+              "title": "Monitoring & Optimization",
+              "description": "Track performance and continuously optimize"
+            }
+          ],
+          "deliverables": [
+            "SEO Strategy Document",
+            "Optimized Website",
+            "Google Ads Campaigns",
+            "Analytics Setup",
+            "Monthly Reports"
+          ],
+          "timeline": "3-6 months",
+          "pricing": "Starting from $3,000/month"
+        },
+        {
+          "id": "social-media-marketing",
+          "name": "Social Media Marketing",
+          "slug": "social-media-marketing",
+          "description": "Strategic social media management and advertising to build brand presence and engage audiences.",
+          "detailedDescription": "Our Social Media Marketing service builds strong brand presence across social platforms, engages with your audience, and drives business growth through strategic content and advertising campaigns.",
+          "features": [
+            "Social Media Strategy",
+            "Content Creation & Curation",
+            "Community Management",
+            "Social Media Advertising",
+            "Influencer Partnerships",
+            "Analytics & Reporting"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Strategy Development",
+              "description": "Define social media goals and target audience"
+            },
+            {
+              "step": 2,
+              "title": "Content Planning",
+              "description": "Create content calendar and posting strategy"
+            },
+            {
+              "step": 3,
+              "title": "Execution",
+              "description": "Create content and manage social media presence"
+            },
+            {
+              "step": 4,
+              "title": "Analysis & Optimization",
+              "description": "Analyze performance and optimize strategy"
+            }
+          ],
+          "deliverables": [
+            "Social Media Strategy",
+            "Content Calendar",
+            "Created Content",
+            "Ad Campaigns",
+            "Performance Reports"
+          ],
+          "timeline": "Ongoing",
+          "pricing": "Starting from $2,500/month"
+        },
+        {
+          "id": "analytics-reporting",
+          "name": "Analytics & Reporting",
+          "slug": "analytics-reporting",
+          "description": "Comprehensive analytics setup and reporting to measure marketing performance and ROI.",
+          "detailedDescription": "Our Analytics & Reporting service provides deep insights into your digital marketing performance, helping you understand customer behavior, measure ROI, and make data-driven decisions to optimize your marketing efforts.",
+          "features": [
+            "Google Analytics Setup",
+            "Conversion Tracking",
+            "Custom Dashboards",
+            "Marketing Attribution",
+            "Performance Reports",
+            "ROI Analysis"
+          ],
+          "process": [
+            {
+              "step": 1,
+              "title": "Analytics Audit",
+              "description": "Review current analytics setup and identify gaps"
+            },
+            {
+              "step": 2,
+              "title": "Implementation",
+              "description": "Set up tracking and measurement systems"
+            },
+            {
+              "step": 3,
+              "title": "Dashboard Creation",
+              "description": "Build custom dashboards for key metrics"
+            },
+            {
+              "step": 4,
+              "title": "Ongoing Reporting",
+              "description": "Provide regular reports and insights"
+            }
+          ],
+          "deliverables": [
+            "Analytics Setup",
+            "Custom Dashboards",
+            "Tracking Implementation",
+            "Monthly Reports",
+            "ROI Analysis"
+          ],
+          "timeline": "4-8 weeks setup",
+          "pricing": "Starting from $2,000/month"
+        }
+      ]
+    }
+  ]
+}
