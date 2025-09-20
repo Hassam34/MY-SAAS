@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ServicesCircle from "../components/ServicesCircle";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -45,6 +46,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Services Circle Section */}
+      <ServicesCircle />
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
