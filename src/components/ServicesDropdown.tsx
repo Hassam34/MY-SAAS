@@ -7,17 +7,29 @@ import servicesData from '../data/services.json';
 export default function ServicesDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
+  // Handle mouse enter with slight delay to prevent accidental triggers
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
     }
+    setIsOpen(true);
+  };
 
-    document.addEventListener('mousedown', handleClickOutside);
+  // Handle mouse leave with delay to allow moving to dropdown
+  const handleMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 150); // 150ms delay
+  };
+
+  // Clean up timeout on unmount
+  useEffect(() => {
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
     };
   }, []);
 
@@ -36,9 +48,13 @@ export default function ServicesDropdown() {
   }));
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div 
+      className="relative" 
+      ref={dropdownRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button
-        onClick={() => setIsOpen(!isOpen)}
         className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
         aria-expanded={isOpen}
       >
@@ -68,7 +84,6 @@ export default function ServicesDropdown() {
                         key={service.id}
                         href={`/services/${category.slug}/${service.slug}`}
                         className="flex items-center text-gray-600 hover:text-blue-600 transition-colors group"
-                        onClick={() => setIsOpen(false)}
                       >
                         <span className="text-gray-400 group-hover:text-blue-500 mr-2 md:mr-3 flex-shrink-0">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,7 +97,6 @@ export default function ServicesDropdown() {
                       <Link
                         href={`/services/${category.slug}`}
                         className="flex items-center text-blue-600 hover:text-blue-700 transition-colors group text-xs md:text-sm font-medium"
-                        onClick={() => setIsOpen(false)}
                       >
                         <span className="mr-2 md:mr-3">→</span>
                         View All {category.name}
@@ -100,7 +114,6 @@ export default function ServicesDropdown() {
                   <div key={index} className={`border-l-4 ${category.color} pl-4 md:pl-6`}>
                     <Link
                       href={category.href}
-                      onClick={() => setIsOpen(false)}
                       className="block hover:text-blue-600 transition-colors"
                     >
                       <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4 hover:text-blue-600 transition-colors">
@@ -113,7 +126,6 @@ export default function ServicesDropdown() {
                           key={serviceIndex}
                           href={service.href}
                       className="flex items-center text-gray-600 hover:text-blue-600 transition-colors group"
-                      onClick={() => setIsOpen(false)}
                     >
                       <span className="text-gray-400 group-hover:text-blue-500 mr-3">
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
