@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ServicesCircle from "../components/ServicesCircle";
+import HeroSlider from "../components/HeroSlider";
 
 export const metadata: Metadata = {
   title: "Digital Transformation & Technology Solutions",
@@ -31,42 +32,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-white py-20 lg:py-32">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat'
-          }}></div>
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 font-poppins">
-              The backbone of your
-              <span className="block text-blue-600">digital business</span>
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8 font-inter">
-              As an industry pioneer and one of the world&apos;s most experienced web development teams, 
-              MIRSSA TECH LTD offers both public and private web solutions - a perfect combination 
-              of flexibility and security for global enterprises.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/portfolio" 
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200 font-poppins"
-              >
-                View Our Work
-              </Link>
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center justify-center px-8 py-4 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200 font-poppins"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Slider Section */}
+      <HeroSlider />
 
       {/* Services Circle Section */}
       <ServicesCircle />
