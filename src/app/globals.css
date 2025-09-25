@@ -111,3 +111,136 @@ html {
 .group:hover .bounce-x {
   animation: bounce-horizontal 0.8s ease-in-out infinite;
 }
+
+/* TrustedBy Component Styles */
+.border-dashed-vertical {
+  border-left: 1px dashed #e5e7eb;
+  border-right: 1px dashed #e5e7eb;
+}
+
+.border-dashed-horizontal {
+  border-top: 1px dashed #e5e7eb;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.border-borderGrey {
+  border-color: #e5e7eb;
+}
+
+.pattern-lines {
+  position: absolute;
+}
+
+.font-heading {
+  font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.text-midnight {
+  color: #1a1a1a;
+}
+
+.rolling-stat {
+  display: inline-block;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.py-7\.5 {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+.lg\:h-24\.5 {
+  height: 6.125rem;
+}
+
+.lg\:px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-6\.5 {
+  height: 1.625rem;
+}
+
+.h-7\.5 {
+  height: 1.875rem;
+}
+
+.sm\:h-6 {
+  height: 1.5rem;
+}
+
+.sm\:h-7 {
+  height: 1.75rem;
+}
+
+.sm\:h-8 {
+  height: 2rem;
+}
+
+.sm\:h-9 {
+  height: 2.25rem;
+}
+
+.text-\[0\.563rem\] {
+  font-size: 0.563rem;
+}
+
+.tracking-\[0\.1em\] {
+  letter-spacing: 0.1em;
+}
+
+.text-\[#7C7C7C\] {
+  color: #7C7C7C;
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
+
+.group-hover\:translate-x-0:hover {
+  transform: translateX(0);
+}
+
+.group-hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.transition-\[opacity\,translate\] {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Features Slider Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
