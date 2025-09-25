@@ -25,6 +25,9 @@ const ServicesCircle = () => {
   const [isAutoRotating, setIsAutoRotating] = useState(true);
   const { serviceCategories } = servicesData;
   
+  // Filter out Digital Transformation service
+  const filteredServiceCategories = serviceCategories.filter(service => service.id !== 'digital-transformation');
+  
   const ROTATION_DURATION = 4000; // 4 seconds per service
 
   // Auto-rotation effect
@@ -34,7 +37,7 @@ const ServicesCircle = () => {
     const interval = setInterval(() => {
       setProgress((prevProgress) => {
         if (prevProgress >= 100) {
-          setCurrentServiceIndex((prevIndex) => (prevIndex + 1) % serviceCategories.length);
+          setCurrentServiceIndex((prevIndex) => (prevIndex + 1) % filteredServiceCategories.length);
           return 0;
         }
         return prevProgress + (100 / (ROTATION_DURATION / 50)); // Update every 50ms
@@ -42,14 +45,14 @@ const ServicesCircle = () => {
     }, 50);
 
     return () => clearInterval(interval);
-  }, [isAutoRotating, serviceCategories.length]);
+  }, [isAutoRotating, filteredServiceCategories.length]);
 
   // Set current service when auto-rotating
   useEffect(() => {
     if (isAutoRotating) {
-      setHoveredService(serviceCategories[currentServiceIndex]);
+      setHoveredService(filteredServiceCategories[currentServiceIndex]);
     }
-  }, [currentServiceIndex, isAutoRotating, serviceCategories]);
+  }, [currentServiceIndex, isAutoRotating, filteredServiceCategories]);
 
   // Handle manual hover
   const handleServiceHover = (service: ServiceCategory | null) => {
@@ -203,11 +206,11 @@ const ServicesCircle = () => {
               style={{ aspectRatio: '1/1' }}
             >
               {/* Service segments */}
-              {serviceCategories.map((service, index) => {
+              {filteredServiceCategories.map((service, index) => {
                 const color = getColorFromBorderClass(service.color);
                 const isHovered = hoveredService?.id === service.id;
                 const isCurrentlyActive = index === currentServiceIndex && isAutoRotating;
-                const path = createSegmentPath(index, serviceCategories.length, 250);
+                const path = createSegmentPath(index, filteredServiceCategories.length, 250);
                 
                 return (
                   <g key={service.id}>
@@ -228,7 +231,7 @@ const ServicesCircle = () => {
                     
                     {/* Service icon and name */}
                     {(() => {
-                      const iconPos = getIconPosition(index, serviceCategories.length, 250);
+                      const iconPos = getIconPosition(index, filteredServiceCategories.length, 250);
                       const isTop = iconPos.y < -50;
                       const isBottom = iconPos.y > 50;
                       const isLeft = iconPos.x < -50;
@@ -258,7 +261,7 @@ const ServicesCircle = () => {
                           <g className="pointer-events-none">
                             {/* Service name text - always visible */}
                             <text
-                              x={isLeft ? -160 : isRight ? 160 : 0}
+                              x={isLeft ? -160 : isRight ? 170 : 0}
                               y={isTop ? -130 : isBottom ? 135 : (isLeft || isRight ? 5 : 160)}
                               textAnchor="middle"
                               className={`text-sm transition-all duration-300 ${
@@ -288,23 +291,20 @@ const ServicesCircle = () => {
                 className="drop-shadow-lg"
               />
               
-              {/* Center business icon */}
-              <foreignObject x="-20" y="-35" width="40" height="30">
-                <div className="text-gray-700 flex justify-center">
-                  <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9,22 9,12 15,12 15,22"/>
-                  </svg>
+              {/* Center MirssaTech Logo */}
+              <foreignObject x="-50" y="-30" width="100" height="60">
+                <div className="flex flex-col items-center justify-center h-full">
+                  <img 
+                    src="/mirssa_tech.png" 
+                    alt="MirssaTech Logo" 
+                    className="w-22 h-12 object-contain"
+                  />
+                  {/* <div className="text-center mt-1">
+                    <div className="text-gray-700 font-bold text-sm leading-tight">MIRSSA</div>
+                    <div className="text-gray-600 text-xs">TECH</div>
+                  </div> */}
                 </div>
               </foreignObject>
-              
-              {/* Center text */}
-              <text x="0" y="15" textAnchor="middle" className="fill-gray-700 font-bold text-lg" fontSize="16">
-                MIRSSA
-              </text>
-              <text x="0" y="35" textAnchor="middle" className="fill-gray-600 text-sm" fontSize="14">
-                TECH
-              </text>
               
               {/* Gradient definitions */}
               <defs>
