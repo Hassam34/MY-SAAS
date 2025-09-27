@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ServicesCircle from "../components/ServicesCircle";
 import HeroSlider from "../components/HeroSlider";
+import ServicesInfographic from "../components/ServicesInfographic";
 import TrustedBy from "../components/TrustedBy";
 import FeaturesSlider from "../components/FeaturesSlider";
 
@@ -37,8 +37,8 @@ export default function Home() {
       {/* Hero Slider Section */}
       <HeroSlider />
 
-      {/* Services Circle Section */}
-      <ServicesCircle />
+      {/* Services Infographic Section */}
+      <ServicesInfographic />
 
       {/* Trusted By Section */}
       <TrustedBy />
