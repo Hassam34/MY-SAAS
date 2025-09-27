@@ -53,7 +53,7 @@ export default function AboutPage() {
               We value human expertise and innovation above all else.
             </h2>
             <p className="text-xl text-gray-700 font-inter">
-              <strong>We are The Real People Behind IT</strong> – and our customers' <strong>First Choice for IT</strong>.
+              <strong>We are The Real People Behind IT</strong> – and our customers&apos; <strong>First Choice for IT</strong>.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function AboutPage() {
           {/* Customer Quote */}
           <div className="bg-gray-50 rounded-lg p-8 text-center">
             <blockquote className="text-xl text-gray-700 italic mb-4 font-inter">
-              "Finally, a tech company that truly understands our world is always evolving. That knows we need a true partner. Somebody that's part of the solution, not the problem."
+              &ldquo;Finally, a tech company that truly understands our world is always evolving. That knows we need a true partner. Somebody that&apos;s part of the solution, not the problem.&rdquo;
             </blockquote>
             <p className="text-gray-600">— Our valued customers</p>
           </div>
@@ -111,10 +111,10 @@ export default function AboutPage() {
                 we champion people.
               </h2>
               <p className="text-lg text-gray-700 mb-6 font-inter">
-                MIRSSA TECH LTD began as a promising technology startup focused on delivering innovative digital solutions. Today, we're a global provider of comprehensive digital transformation services, reaching clients across multiple countries and employing talented professionals worldwide.
+                MIRSSA TECH LTD began as a promising technology startup focused on delivering innovative digital solutions. Today, we&apos;re a global provider of comprehensive digital transformation services, reaching clients across multiple countries and employing talented professionals worldwide.
               </p>
               <p className="text-lg text-gray-700 font-inter">
-                Human relationships and expertise are at the core of our approach – because technology without people is limited. People behind it, in front of it, elevating it, and propelling it forward. We value the human effort of IT because we live and thrive in the relentless curiosity and imperative change of today's world.
+                Human relationships and expertise are at the core of our approach – because technology without people is limited. People behind it, in front of it, elevating it, and propelling it forward. We value the human effort of IT because we live and thrive in the relentless curiosity and imperative change of today&apos;s world.
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
@@ -145,13 +145,13 @@ export default function AboutPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">
-              Size doesn't matter.
+              Size doesn&apos;t matter.
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
               We help organizations of all sizes succeed with custom digital transformation services and solutions for business, healthcare, government, and education, plus market verticals like retail, utilities, and financial services, to name a few.
             </p>
             <p className="text-lg text-gray-600 mt-4 font-inter">
-              Whether you're local, growing globally, or somewhere in between, we have the expertise and the scale to help you achieve your goals – and even exceed them.
+              Whether you&apos;re local, growing globally, or somewhere in between, we have the expertise and the scale to help you achieve your goals – and even exceed them.
             </p>
           </div>
 
@@ -187,7 +187,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Right-Sized</h3>
               <p className="text-gray-600 text-sm font-inter">
-                Sure, we're global, but we aren't so big we're impersonal. We're small enough to be nimble and keep simplicity in mind.
+                Sure, we&apos;re global, but we aren&apos;t so big we&apos;re impersonal. We&apos;re small enough to be nimble and keep simplicity in mind.
               </p>
             </div>
             <div className="text-center">
@@ -211,10 +211,10 @@ export default function AboutPage() {
               Values matter.
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
-              MIRSSA TECH LTD is founded on diversity, and our team reflects it. Our team members come from all walks of life and all corners of the world. We wouldn't have it any other way.
+              MIRSSA TECH LTD is founded on diversity, and our team reflects it. Our team members come from all walks of life and all corners of the world. We wouldn&apos;t have it any other way.
             </p>
             <p className="text-lg text-gray-600 mt-4 font-inter">
-              We're also committed to supporting local communities. We take pride in a culture that gives back to the community and promotes environmental sustainability.
+              We&apos;re also committed to supporting local communities. We take pride in a culture that gives back to the community and promotes environmental sustainability.
             </p>
           </div>
 
@@ -223,7 +223,7 @@ export default function AboutPage() {
             <div className="bg-white p-8 rounded-lg shadow-sm border">
               <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">We listen and collaborate with purpose.</h3>
               <p className="text-gray-600 mb-4 font-inter">
-                <strong>We're prepared, proactive, and precise.</strong> We listen to understand your needs. And we believe in the power of collaboration to spark innovation and deliver results.
+                <strong>We&apos;re prepared, proactive, and precise.</strong> We listen to understand your needs. And we believe in the power of collaboration to spark innovation and deliver results.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border">
@@ -251,7 +251,7 @@ export default function AboutPage() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">2</div>
-                <h4 className="font-semibold text-gray-900 mb-2 font-poppins">"Consider-it-done" approach</h4>
+                <h4 className="font-semibold text-gray-900 mb-2 font-poppins">&ldquo;Consider-it-done&rdquo; approach</h4>
                 <p className="text-sm text-gray-600 font-inter">To support you through every stage of the delivery process.</p>
               </div>
               <div className="text-center">
@@ -280,7 +280,7 @@ export default function AboutPage() {
               We lend our expertise. All 10-plus years of it.
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
-              <strong>We're passionate about technology.</strong> Our subject matter experts and advisors bring a wealth of experience to every project. We want nothing more than to ensure you get the optimal digital transformation services and solutions for your organization, your budget, and your ambitions for the future.
+              <strong>We&apos;re passionate about technology.</strong> Our subject matter experts and advisors bring a wealth of experience to every project. We want nothing more than to ensure you get the optimal digital transformation services and solutions for your organization, your budget, and your ambitions for the future.
             </p>
           </div>
         </section>

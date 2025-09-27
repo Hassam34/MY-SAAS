@@ -213,7 +213,7 @@ export default function TeamPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">Customer Success</h3>
               <p className="text-gray-600 font-inter">
-                Our success is measured by our clients' success. We are committed to delivering solutions that exceed expectations and drive real business value.
+                Our success is measured by our clients&apos; success. We are committed to delivering solutions that exceed expectations and drive real business value.
               </p>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function TeamPage() {
             Ready to work with our team?
           </h2>
           <p className="text-xl text-blue-100 mb-8 font-inter">
-            Let's discuss how our experienced leadership team can help transform your business.
+            Let&apos;s discuss how our experienced leadership team can help transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

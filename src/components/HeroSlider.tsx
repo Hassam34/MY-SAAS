@@ -93,27 +93,7 @@ export default function HeroSlider() {
     return () => clearInterval(interval);
   }, []);
 
-  const goToSlide = (index: number) => {
-    if (index === currentSlide || isTransitioning) return;
-    
-    setIsTransitioning(true);
-    setCurrentSlide(index);
-    
-    // Reset transition state after animation
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 500);
-  };
 
-  const goToPrevious = () => {
-    const newIndex = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
-    goToSlide(newIndex);
-  };
-
-  const goToNext = () => {
-    const newIndex = (currentSlide + 1) % slides.length;
-    goToSlide(newIndex);
-  };
 
   return (
     <section className="relative h-screen overflow-hidden bg-gray-900">

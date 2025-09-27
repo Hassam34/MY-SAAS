@@ -2,10 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import servicesData from '../data/services.json';
+
+interface Service {
+  id: number;
+  title: string;
+  icon: string;
+  color: string;
+  link: string;
+}
 
 const ServicesInfographic = () => {
-  const [hoveredService, setHoveredService] = useState<any | null>(null);
+  const [hoveredService, setHoveredService] = useState<Service | null>(null);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isAutoRotating, setIsAutoRotating] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -93,7 +100,7 @@ const ServicesInfographic = () => {
   }, [currentServiceIndex, isAutoRotating, isMounted]);
 
   // Handle manual hover
-  const handleServiceHover = (service: any | null) => {
+  const handleServiceHover = (service: Service | null) => {
     if (!isMounted) return;
     
     if (service) {
@@ -216,7 +223,7 @@ const ServicesInfographic = () => {
             The backbone of your business
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter">
-            As an industry pioneer and one of the world's most experienced technology providers, 
+            As an industry pioneer and one of the world&apos;s most experienced technology providers, 
             MIRSSA TECH offers both public and private connectivity solutions - a perfect combination 
             of flexibility and security for global enterprises.
           </p>
