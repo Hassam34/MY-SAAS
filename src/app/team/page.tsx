@@ -1,77 +1,121 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Our Team - MIRSSA TECH LTD",
-  description: "Meet the leadership team at MIRSSA TECH LTD. Our experienced executives bring decades of expertise in digital transformation, technology solutions, and business innovation.",
-  keywords: [
-    "leadership team",
-    "executive team",
-    "MIRSSA TECH leadership",
-    "company executives",
-    "technology leaders",
-    "digital transformation experts"
-  ],
+import Link from "next/link";
+import { useState } from "react";
+import ScrollAnimation from "../../components/ScrollAnimation";
+
+interface TeamMember {
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+  linkedin: string;
+  email: string;
+}
+
+// Team member component with image fallback
+const TeamMember = ({ member, index }: { member: TeamMember; index: number }) => {
+  const [imageError, setImageError] = useState(false);
+  
+  // Alternating layout: even index = image left, odd index = image right
+  const isImageLeft = index % 2 === 0;
+  
+  // Background colors for images
+  const imageBgColors = [
+    'bg-green-100', // Light green
+    'bg-purple-100', // Light purple  
+    'bg-green-100', // Light green
+    'bg-blue-100'   // Light blue
+  ];
+  
+  const textBgColor = 'bg-gray-50';
+
+  return (
+    <ScrollAnimation 
+      direction={isImageLeft ? "left" : "right"} 
+      delay={index * 0.2} 
+      duration={0.8}
+      distance={100}
+    >
+      <div className="w-full">
+        <div className={`flex flex-col lg:flex-row items-center min-h-[400px] ${textBgColor}`}>
+          {/* Profile Image - Conditionally positioned */}
+          <div className={`w-full lg:w-1/2 h-96 lg:h-auto ${imageBgColors[index % imageBgColors.length]} flex items-center justify-center p-8 ${isImageLeft ? 'lg:order-1' : 'lg:order-2'}`}>
+            <div className="w-80 h-80 rounded-lg overflow-hidden bg-white shadow-lg">
+              {!imageError ? (
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-6xl font-bold">
+                  {member.name.split(' ').map((n: string) => n[0]).join('')}
+                </div>
+              )}
+            </div>
+          </div>
+          
+          {/* Content - Conditionally positioned */}
+          <div className={`w-full lg:w-1/2 p-12 ${textBgColor} flex flex-col justify-center ${isImageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
+            <h3 className="text-4xl font-bold text-blue-900 mb-4 font-poppins">
+              {member.name}
+            </h3>
+            <p className="text-xl text-blue-700 font-semibold mb-6 font-inter">
+              {member.title}
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg mb-8 font-inter">
+              {member.bio}
+            </p>
+            
+            {/* Contact Link */}
+            <a 
+              href={`mailto:${member.email}`}
+              className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors font-semibold text-lg"
+            >
+              Reach out to {member.name.split(' ')[0]} →
+            </a>
+          </div>
+        </div>
+      </div>
+    </ScrollAnimation>
+  );
 };
 
-// Team member data
+// Leadership team data
 const leadershipTeam = [
- 
   {
     name: "Muhamad Saleh",
-    title: "Chief Executive Officer & Founder",
-    bio: "Muhamad Saleh is the CEO and Founder of MIRSSA TECH LTD. With over 10 years of experience in digital transformation and technology solutions, he has led the company from its inception to become a global provider of comprehensive IT services. Prior to founding MIRSSA TECH, Hassam held senior leadership positions at major technology companies, driving innovation and growth across multiple sectors. He holds a Master's degree in Computer Science and is passionate about leveraging technology to solve complex business challenges.",
-    image: "/team/saleh.jpg",
+    title: "Chairman, Board of Directors",
+    bio: "Prior to founding MIRSSA TECH, Muhamad spent two decades in technology consulting, most recently as a Managing Director advising global clients in digital transformation. He led MIRSSA TECH's growth strategy, expanding our services 7x in 3 years. He has worked with some of the region's fast-growing technology companies and has been instrumental in developing our comprehensive digital solutions portfolio.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format&q=80",
     linkedin: "https://linkedin.com/in/saleh",
     email: "saleh@mirssatech.com"
   },
   {
     name: "Muhammad Hassam Yahya",
-    title: "Chief Technical Officer & Co-Founder",
-    bio: "Hassam Yahya is the CTO and Co-Founder of MIRSSA TECH LTD. With over 10 years of experience in digital transformation and technology solutions, he has led the company from its inception to become a global provider of comprehensive IT services. Prior to founding MIRSSA TECH, Hassam held senior leadership positions at major technology companies, driving innovation and growth across multiple sectors. He holds a Master's degree in Computer Science and is passionate about leveraging technology to solve complex business challenges.",
-    image: "/team/hassam-yahya.jpg",
+    title: "Chief Executive Officer",
+    bio: "Hassam brings nearly 2 decades of expertise in Technology Leadership, Strategic Planning, Digital Innovation, Operations, and Team Management. With a strong track record of building innovative teams and driving impactful initiatives, Hassam is committed to solving some of the world's most critical challenges in digital transformation and technology adoption. He is also a certified technology strategist and has led multiple successful digital transformation projects across various industries.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format&q=80",
     linkedin: "https://linkedin.com/in/hassamyahya",
     email: "hassam@mirssatech.com"
   },
   {
-    name: "Sarah Johnson",
-    title: "Chief Technology Officer",
-    bio: "Sarah Johnson serves as Chief Technology Officer, overseeing all technical operations and innovation initiatives at MIRSSA TECH LTD. With 15+ years of experience in enterprise architecture and cloud solutions, she has been instrumental in developing our cutting-edge AI and machine learning capabilities. Sarah previously held senior technical roles at leading technology companies and holds a Ph.D. in Artificial Intelligence from MIT. She is recognized as one of the top 100 technology leaders by industry publications.",
-    image: "/team/sarah-johnson.jpg",
+    name: "Dr. Sarah Johnson",
+    title: "Health & Public Sector Senior Advisor",
+    bio: "A leading authority in Technology Innovation in Pakistan, Dr. Sarah Johnson has more than 28 years of diverse experience in public and private technology sectors. Her expertise includes program management, digital transformation initiatives, public sector technology implementations, team building & leadership, project proposal development, execution, and monitoring. She has been instrumental in developing our health tech and public sector solutions.",
+    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face&auto=format&q=80",
     linkedin: "https://linkedin.com/in/sarahjohnson",
     email: "sarah@mirssatech.com"
   },
   {
     name: "Michael Chen",
-    title: "Chief Operating Officer",
-    bio: "Michael Chen is the Chief Operating Officer responsible for global operations and strategic execution. With extensive experience in scaling technology companies, he has successfully led operations across multiple continents. Michael brings 12+ years of operational excellence from his previous roles at Fortune 500 companies, where he specialized in process optimization and digital transformation. He holds an MBA from Harvard Business School and is passionate about building efficient, scalable operations that drive business growth.",
-    image: "/team/michael-chen.jpg",
+    title: "Senior Advisor",
+    bio: "Michael is a Senior Advisor at MIRSSA TECH, having 20+ years of experience in the tech industry. Before joining MIRSSA TECH he was the Chief Executive Officer at Tech Solutions Inc. and prior to that served as the Chief Commercial Officer of Global Tech Corp. Having experience in enterprise solutions and business technology, he is passionate about building scalable and reliable software systems that can innovate various business sectors.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face&auto=format&q=80",
     linkedin: "https://linkedin.com/in/michaelchen",
     email: "michael@mirssatech.com"
-  },
-  {
-    name: "Dr. Aisha Patel",
-    title: "Chief Innovation Officer",
-    bio: "Dr. Aisha Patel leads innovation and research initiatives at MIRSSA TECH LTD. As Chief Innovation Officer, she is responsible for identifying emerging technologies and developing new solutions that keep our clients ahead of the curve. With a Ph.D. in Data Science and 10+ years of experience in AI research, Aisha has published numerous papers on machine learning and predictive analytics. She previously served as Director of Research at a leading technology institute and is a frequent speaker at international conferences.",
-    image: "/team/aisha-patel.jpg",
-    linkedin: "https://linkedin.com/in/aishapatel",
-    email: "aisha@mirssatech.com"
-  },
-  {
-    name: "David Rodriguez",
-    title: "Chief Financial Officer",
-    bio: "David Rodriguez serves as Chief Financial Officer, managing all financial operations and strategic planning. With 18+ years of experience in corporate finance and M&A, he has successfully guided multiple technology companies through periods of rapid growth and expansion. David holds a CPA certification and an MBA in Finance from Wharton School. He is responsible for financial strategy, investor relations, and ensuring sustainable growth while maintaining operational excellence.",
-    image: "/team/david-rodriguez.jpg",
-    linkedin: "https://linkedin.com/in/davidrodriguez",
-    email: "david@mirssatech.com"
-  },
-  {
-    name: "Emma Thompson",
-    title: "Chief Marketing Officer",
-    bio: "Emma Thompson leads global marketing and brand strategy at MIRSSA TECH LTD. With 14+ years of experience in technology marketing, she has successfully built and scaled marketing operations for high-growth companies. Emma specializes in digital marketing, brand development, and customer acquisition strategies. She holds a Master's degree in Marketing from London Business School and has been recognized for her innovative approaches to B2B technology marketing. Emma is passionate about creating meaningful connections between technology and business outcomes.",
-    image: "/team/emma-thompson.jpg",
-    linkedin: "https://linkedin.com/in/emmathompson",
-    email: "emma@mirssatech.com"
   }
 ];
 
@@ -79,172 +123,59 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
-              Leadership Team
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
-              Shaping the Future of Digital Transformation
-            </p>
-            <p className="text-lg text-gray-600 mt-4 font-inter">
-              Members of the MIRSSA TECH leadership team were selected for their experience, strategic thinking and planning skills, and their ability to effectively produce results in the digital transformation marketplace.
-            </p>
+      <ScrollAnimation direction="fade" duration={0.8}>
+        <section className="py-16 bg-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-poppins">
+                OUR LEADERSHIP
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-700 font-inter">
+                Leading today to build tomorrow
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Navigation Breadcrumb */}
-      <section className="bg-gray-50 py-4">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
-            <span className="text-gray-400">/</span>
-            <Link href="/about" className="text-blue-600 hover:text-blue-800">About Us</Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-gray-600">Leadership Team</span>
-          </nav>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* Leadership Team */}
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-poppins">
-              Leadership Team
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="bg-white">
+        <div className="mx-auto max-w-full">
+          <div>
             {leadershipTeam.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden border">
-                <div className="p-8">
-                  <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6">
-                    {/* Profile Image Placeholder */}
-                    <div className="flex-shrink-0">
-                      <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2 font-poppins">
-                        {member.name}
-                      </h3>
-                      <p className="text-lg text-blue-600 font-semibold mb-4 font-inter">
-                        {member.title}
-                      </p>
-                      <p className="text-gray-700 leading-relaxed mb-6 font-inter">
-                        {member.bio}
-                      </p>
-                      
-                      {/* Contact Links */}
-                      <div className="flex space-x-4">
-                        <a 
-                          href={member.linkedin}
-                          className="text-blue-600 hover:text-blue-800 transition-colors"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
-                          </svg>
-                        </a>
-                        <a 
-                          href={`mailto:${member.email}`}
-                          className="text-gray-600 hover:text-gray-800 transition-colors"
-                        >
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <TeamMember key={index} member={member} index={index} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Company Culture Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">
-              Our Leadership Philosophy
-            </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
-              Our leadership team is united by a shared vision: to empower businesses through innovative technology solutions while maintaining the highest standards of integrity, excellence, and customer focus.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">Innovation First</h3>
-              <p className="text-gray-600 font-inter">
-                We continuously explore emerging technologies and innovative approaches to deliver cutting-edge solutions that drive business transformation.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">Collaborative Excellence</h3>
-              <p className="text-gray-600 font-inter">
-                We believe in the power of teamwork and collaboration, fostering an environment where diverse perspectives drive exceptional outcomes.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">Customer Success</h3>
-              <p className="text-gray-600 font-inter">
-                Our success is measured by our clients&apos; success. We are committed to delivering solutions that exceed expectations and drive real business value.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="bg-blue-600 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4 font-poppins">
-            Ready to work with our team?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 font-inter">
-            Let&apos;s discuss how our experienced leadership team can help transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors font-poppins"
-            >
-              GET IN TOUCH
-            </Link>
-            <Link 
-              href="/about" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors font-poppins"
-            >
-              LEARN MORE ABOUT US
-            </Link>
+      <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
+        <section className="py-20 bg-gray-50">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">
+              Got a bold vision for change?
+            </h2>
+            <p className="text-xl text-gray-700 mb-8 font-inter">
+              A challenge that keeps you up at night? Let&apos;s join forces and turn your ideas into solutions that leave a lasting impact.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors font-poppins text-lg"
+              >
+                Reach out
+              </Link>
+              <a 
+                href="mailto:contact@mirssatech.com"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors font-poppins text-lg"
+              >
+                contact@mirssatech.com
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
     </div>
   );
 }

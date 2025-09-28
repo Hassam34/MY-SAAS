@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import ScrollAnimation from "../../components/ScrollAnimation";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -10,35 +11,41 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-black mb-6 font-poppins">
-              Get in Touch
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
-              Ready to start your next project? We&apos;d love to hear from you. 
-              Send us a message and we&apos;ll respond as soon as possible.
-            </p>
+      <ScrollAnimation direction="fade" duration={0.8}>
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl font-bold text-black mb-6 font-poppins">
+                Get in Touch
+              </h1>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
+                Ready to start your next project? We&apos;d love to hear from you. 
+                Send us a message and we&apos;ll respond as soon as possible.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* Contact Section */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-black mb-6 font-poppins">
-                Send us a message
-              </h2>
-              <ContactForm />
-            </div>
+      <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
+        <section className="py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <ScrollAnimation direction="left" delay={0.3} duration={0.8}>
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold text-black mb-6 font-poppins">
+                    Send us a message
+                  </h2>
+                  <ContactForm />
+                </div>
+              </ScrollAnimation>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
+              {/* Contact Information */}
+              <ScrollAnimation direction="right" delay={0.4} duration={0.8}>
+                <div className="space-y-8">
+                  <div>
                 <h2 className="text-2xl font-bold text-black mb-6 font-poppins">
                   Contact Information
                 </h2>
@@ -119,11 +126,13 @@ export default function ContactPage() {
                     </svg>
                   </a>
                 </div>
-              </div>
-            </div>
+                  </div>
+                </div>
+              </ScrollAnimation>
           </div>
         </div>
       </section>
+      </ScrollAnimation>
     </div>
   );
 }
