@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ScrollAnimation from "../../components/ScrollAnimation";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -61,29 +62,37 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-black mb-6 font-poppins">
-              Our Portfolio
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
-              A showcase of our latest projects and the innovative solutions we&apos;ve delivered 
-              for clients across various industries.
-            </p>
+      <ScrollAnimation direction="fade" duration={0.8}>
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl font-bold text-black mb-6 font-poppins">
+                Our Portfolio
+              </h1>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
+                A showcase of our latest projects and the innovative solutions we&apos;ve delivered 
+                for clients across various industries.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* Projects Grid */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div 
-                key={project.id} 
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-200"
-              >
+      <ScrollAnimation direction="up" delay={0.1} duration={0.8}>
+        <section className="py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project, index) => (
+                <ScrollAnimation 
+                  key={project.id} 
+                  direction="up" 
+                  delay={0.1 + (index * 0.1)} 
+                  duration={0.6}
+                >
+                  <div 
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-200"
+                  >
                 <div className={`h-48 ${project.image} relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4">
@@ -120,28 +129,32 @@ export default function PortfolioPage() {
                   </Link>
                 </div>
               </div>
+              </ScrollAnimation>
             ))}
           </div>
         </div>
       </section>
+      </ScrollAnimation>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-poppins">
-            Ready to start your project?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto font-inter">
-            Let&apos;s discuss your requirements and create something amazing together.
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors duration-200 font-poppins"
-          >
-            Start Your Project
-          </Link>
-        </div>
-      </section>
+      <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
+        <section className="py-20 bg-blue-600">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-poppins">
+              Ready to start your project?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto font-inter">
+              Let&apos;s discuss your requirements and create something amazing together.
+            </p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors duration-200 font-poppins"
+            >
+              Start Your Project
+            </Link>
+          </div>
+        </section>
+      </ScrollAnimation>
     </div>
   );
 }

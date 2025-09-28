@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import ScrollAnimation from './ScrollAnimation';
 
 interface Service {
   id: number;
@@ -21,49 +22,49 @@ const ServicesInfographic = () => {
   const services = [
     {
       id: 1,
-      title: "Do you want to transform your business digitally?",
+      title: "Do you want to transform<br />your business digitally?",
       icon: "chart",
       color: "#8b5cf6",
       link: "/services/digital-transformation"
     },
     {
       id: 2,
-      title: "Do you want to harness AI & Machine Learning?",
+      title: "Do you want to harness<br />AI & Machine Learning?",
       icon: "brain",
       color: "#3b82f6",
       link: "/services/ai-machine-learning"
     },
     {
       id: 3,
-      title: "Do you want to unlock data insights?",
+      title: "Do you want to unlock<br />data insights?",
       icon: "analytics",
       color: "#10b981",
       link: "/services/data-analytics"
     },
     {
       id: 4,
-      title: "Do you want to build mobile solutions?",
+      title: "Do you want to build<br />mobile solutions?",
       icon: "mobile",
       color: "#f59e0b",
       link: "/services/enterprise-mobility"
     },
     {
       id: 5,
-      title: "Do you want to explore emerging technologies?",
+      title: "Do you want to explore<br />emerging technologies?",
       icon: "rocket",
       color: "#ef4444",
       link: "/services/innovation-emerging-tech"
     },
     {
       id: 6,
-      title: "Do you want to automate business processes?",
+      title: "Do you want to automate<br />business processes?",
       icon: "settings",
       color: "#06b6d4",
       link: "/services/business-solutions"
     },
     {
       id: 7,
-      title: "Do you want to boost your digital marketing?",
+      title: "Do you want to boost<br />your digital marketing?",
       icon: "marketing",
       color: "#84cc16",
       link: "/services/digital-marketing"
@@ -186,48 +187,43 @@ const ServicesInfographic = () => {
     }
   };
 
-  // Calculate all segment paths once to ensure consistency
-  const segmentPaths = services.map((_, index) => {
-    const angle = (index * 51.43) - 90;
-    const startAngle = angle - 25.71;
-    const endAngle = angle + 25.71;
-    const startRad = (startAngle * Math.PI) / 180;
-    const endRad = (endAngle * Math.PI) / 180;
-    
-    const x1 = 400 + Math.cos(startRad) * 250;
-    const y1 = 400 + Math.sin(startRad) * 250;
-    const x2 = 400 + Math.cos(endRad) * 250;
-    const y2 = 400 + Math.sin(endRad) * 250;
-    
-    const largeArcFlag = 51.43 > 180 ? 1 : 0;
-    return `M 400,400 L ${x1},${y1} A 250,250 0 ${largeArcFlag},1 ${x2},${y2} Z`;
-  });
+  // Pre-calculate segment paths with fixed precision to ensure server/client consistency
+  const segmentPaths = [
+    "M 400,400 L 291.52906522061039,174.75778302439528 A 250,250 0 0,1 508.47093477938961,174.75778302439525 Z",
+    "M 400,400 L 508.47093477938961,174.75778302439525 A 250,250 0 0,1 643.73197804545589,344.36976651092141 Z",
+    "M 400,400 L 643.73197804545589,344.36976651092141 A 250,250 0 0,1 595.45787061700742,555.87245046468342 Z",
+    "M 400,400 L 595.45787061700753,555.87245046468331 A 250,250 0 0,1 400.00000000000000,650.00000000000000 Z",
+    "M 400,400 L 400.00000000000000,650.00000000000000 A 250,250 0 0,1 204.54212938299258,555.87245046468342 Z",
+    "M 400,400 L 204.54212938299258,555.87245046468342 A 250,250 0 0,1 156.26802195454414,344.36976651092124 Z",
+    "M 400,400 L 156.26802195454405,344.36976651092152 A 250,250 0 0,1 291.52906522061045,174.75778302439525 Z"
+  ];
 
-  // Calculate all icon positions once to ensure consistency
-  const iconPositions = services.map((_, index) => {
-    const angle = (index * 51.43) - 90;
-    const radians = (angle * Math.PI) / 180;
-    const iconRadius = 180;
-    
-    return {
-      x: 400 + Math.cos(radians) * iconRadius,
-      y: 400 + Math.sin(radians) * iconRadius,
-    };
-  });
+  // Pre-calculate icon positions with fixed precision to ensure server/client consistency
+  const iconPositions = [
+    { x: 400.00000000000000, y: 220.00000000000000 },
+    { x: 540.72966684424534, y: 287.77183566542794 },
+    { x: 575.48702419272831, y: 440.05376811213659 },
+    { x: 478.09907304116052, y: 562.17439622243546 },
+    { x: 321.90092695883948, y: 562.17439622243546 },
+    { x: 224.51297580727174, y: 440.05376811213659 },
+    { x: 259.27033315575466, y: 287.77183566542800 }
+  ];
 
   return (
     <section className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center ">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins">
-            The backbone of your business
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter">
-            As an industry pioneer and one of the world&apos;s most experienced technology providers, 
-            MIRSSA TECH offers both public and private connectivity solutions - a perfect combination 
-            of flexibility and security for global enterprises.
-          </p>
-        </div>
+        <ScrollAnimation direction="up" delay={0.1} duration={0.8}>
+          <div className="text-center ">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-poppins">
+              The backbone of your business
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter">
+              As an industry pioneer and one of the world&apos;s most experienced technology providers, 
+              MIRSSA TECH offers both public and private connectivity solutions - a perfect combination 
+              of flexibility and security for global enterprises.
+            </p>
+          </div>
+        </ScrollAnimation>
 
         {/* Desktop Circle View */}
         <div className="hidden md:flex justify-center ">
@@ -297,21 +293,25 @@ const ServicesInfographic = () => {
                     </g>
                     
                     {/* Service title - positioned well outside circle */}
-                    <text
-                      x={iconX + (iconX > 400 ? 150 : -150)}
-                      y={iconY - 25}
-                      textAnchor={iconX > 400 ? "start" : "end"}
-                      className={`text-xs font-medium transition-all duration-500 ${
-                        isHovered || isCurrentlyActive ? 'font-bold' : 'font-normal'
-                      }`}
-                      fill={isHovered || isCurrentlyActive ? service.color : '#6b7280'}
-                      style={{
-                        opacity: isHovered || isCurrentlyActive ? 1 : 0.8,
-                        transform: isHovered || isCurrentlyActive ? 'scale(1.05)' : 'scale(1)',
-                      }}
+                    <foreignObject 
+                      x={iconX + (iconX > 400 ? 250 : -250) - 100} 
+                      y={iconY - 80} 
+                      width="200" 
+                      height="80"
                     >
-                      {service.title}
-                    </text>
+                      <div 
+                        className={`text-xs font-medium transition-all duration-500 text-center ${
+                          isHovered || isCurrentlyActive ? 'font-bold' : 'font-normal'
+                        }`}
+                        style={{
+                          color: isHovered || isCurrentlyActive ? service.color : '#6b7280',
+                          opacity: isHovered || isCurrentlyActive ? 1 : 0.8,
+                          transform: isHovered || isCurrentlyActive ? 'scale(1.05)' : 'scale(1)',
+                          marginTop: [2,4, 5, 6, 3,7].includes(service.id) ? '20px' : '-3px',
+                        }}
+                        dangerouslySetInnerHTML={{ __html: service.title }}
+                      />
+                    </foreignObject>
                     
                    
                   </g>
@@ -389,9 +389,10 @@ const ServicesInfographic = () => {
                       </div>
                       
                       {/* Service Title */}
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
-                        {service.title}
-                      </h3>
+                      <h3 
+                        className="text-lg font-semibold text-gray-900 mb-3 leading-tight"
+                        dangerouslySetInnerHTML={{ __html: service.title }}
+                      />
                       
                       {/* Read More Button */}
                       <button
@@ -413,7 +414,7 @@ const ServicesInfographic = () => {
             </div>
             
             {/* Mobile Progress Indicators */}
-            <div className="flex justify-center mt-6 space-x-2">
+            {/* <div className="flex justify-center mt-6 space-x-2">
               {services.map((_, index) => (
                 <button
                   key={index}
@@ -428,27 +429,29 @@ const ServicesInfographic = () => {
                   }}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors font-poppins text-base"
-            >
-              Contact us today
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors font-poppins text-base"
-            >
-              Find my solution
-            </Link>
+        <ScrollAnimation direction="up" delay={0.3} duration={0.8}>
+          <div className="text-center mt-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors font-poppins text-base"
+              >
+                Contact us today
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors font-poppins text-base"
+              >
+                Find my solution
+              </Link>
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </div>
     </section>
   );
