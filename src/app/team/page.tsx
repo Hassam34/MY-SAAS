@@ -157,7 +157,7 @@ export default function TeamPage() {
               Got a bold vision for change?
             </h2>
             <p className="text-xl text-gray-700 mb-8 font-inter">
-              A challenge that keeps you up at night? Let's join forces and turn your ideas into solutions that leave a lasting impact.
+              A challenge that keeps you up at night? Let&apos;s join forces and turn your ideas into solutions that leave a lasting impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
