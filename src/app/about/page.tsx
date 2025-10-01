@@ -22,305 +22,310 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <ScrollAnimation direction="fade" duration={0.8}>
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 py-32 overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="w-full h-full" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundRepeat: 'repeat'
+            }}></div>
+          </div>
+          
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
-                Get to Know Us
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-poppins">
+                The modern technology platform for a better digital world.
               </h1>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto font-inter">
-                We solve complex IT problems TODAY with complete solutions that can transition TOMORROW.
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 font-inter">
+                MIRSSA TECH brings AI, data, and digital solutions together on one purpose-built platform for modern businesses.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors font-poppins text-lg"
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  href="/team" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors font-poppins text-lg"
+                >
+                  Meet Our Team
+                </Link>
+              </div>
             </div>
           </div>
         </section>
       </ScrollAnimation>
-
-      {/* Navigation Breadcrumb */}
-      <section className="bg-gray-50 py-4">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-gray-600">About Us</span>
-          </nav>
-        </div>
-      </section>
 
       {/* Main Content */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Mission Statement */}
         <ScrollAnimation direction="up" delay={0.1} duration={0.8}>
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-poppins">
-                We value human expertise and innovation above all else.
+          <section className="py-20">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 font-poppins">
+                We make it easier and faster to build digital solutions.
               </h2>
-              <p className="text-xl text-gray-700 font-inter">
-                <strong>We are The Real People Behind IT</strong> – and our customers&apos; <strong>First Choice for IT</strong>.
+              <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 font-poppins">
+                We started MIRSSA TECH with a simple but urgent belief: Technology should empower people.
+              </h3>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-inter">
+                We live in a time of extraordinary technological progress — and yet many businesses are held back by systems that&apos;re fragmented, inefficient, and falling behind.
+              </p>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-inter mt-6">
+                Meanwhile, the stakes couldn&apos;t be higher. Digital transformation, AI adoption, data-driven decisions, and modern infrastructure all depend on our ability to build better technology solutions.
+              </p>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-inter mt-6">
+                We founded MIRSSA TECH to help fix that.
               </p>
             </div>
 
-            {/* Service Categories */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            {/* Team Image Placeholder */}
+            <ScrollAnimation direction="fade" delay={0.3} duration={0.8}>
+              <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-12 mb-16">
+                <div className="text-center text-white">
+                  <h3 className="text-2xl font-bold mb-4 font-poppins">The MIRSSA TECH team in 2024</h3>
+                  <div className="bg-white/20 rounded-lg p-8 backdrop-blur-sm">
+                    <div className="text-6xl mb-4">👥</div>
+                    <p className="text-lg">Our global team of technology experts and innovators</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Digital Workplace</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Networking</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Cloud & Data Center</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Security</h3>
-            </div>
-          </div>
+            </ScrollAnimation>
 
-          {/* Customer Quote */}
-          <ScrollAnimation direction="fade" delay={0.3} duration={0.8}>
-            <div className="bg-gray-50 rounded-lg p-8 text-center">
-              <blockquote className="text-xl text-gray-700 italic mb-4 font-inter">
-                &ldquo;Finally, a tech company that truly understands our world is always evolving. That knows we need a true partner. Somebody that&apos;s part of the solution, not the problem.&rdquo;
-              </blockquote>
-              <p className="text-gray-600">— Our valued customers</p>
-            </div>
-          </ScrollAnimation>
-        </section>
-      </ScrollAnimation>
+            {/* Stats Section */}
+            <ScrollAnimation direction="up" delay={0.4} duration={0.8}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 font-poppins">500+</div>
+                  <div className="text-gray-600 font-inter">customers</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 font-poppins">50+</div>
+                  <div className="text-gray-600 font-inter">technology partners</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 font-poppins">10+</div>
+                  <div className="text-gray-600 font-inter">years in business</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 font-poppins">25+</div>
+                  <div className="text-gray-600 font-inter">countries served</div>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </section>
+        </ScrollAnimation>
 
-        {/* Our Story */}
+        {/* Three Key Benefits */}
         <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
-          <section className="mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <ScrollAnimation direction="left" delay={0.3} duration={0.8}>
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">
-                    In a world full of technology,<br />
-                    we champion people.
-                  </h2>
-                  <p className="text-lg text-gray-700 mb-6 font-inter">
-                    MIRSSA TECH LTD began as a promising technology startup focused on delivering innovative digital solutions. Today, we&apos;re a global provider of comprehensive digital transformation services, reaching clients across multiple countries and employing talented professionals worldwide.
-                  </p>
+          <section className="py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              {/* Deliver solutions faster */}
+              <ScrollAnimation direction="up" delay={0.3} duration={0.8}>
+                <div className="text-center">
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 mb-6 h-64 flex items-center justify-center">
+                    <div className="text-6xl">⚡</div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 font-poppins">
+                    Deliver solutions faster, with far less friction.
+                  </h3>
+                </div>
+              </ScrollAnimation>
+
+              {/* Build strong teams */}
+              <ScrollAnimation direction="up" delay={0.4} duration={0.8}>
+                <div className="text-center">
+                  <div className="bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl p-8 mb-6 h-64 flex items-center justify-center">
+                    <div className="text-6xl">👥</div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 font-poppins">
+                    Build strong teams.
+                  </h3>
                   <p className="text-lg text-gray-700 font-inter">
-                    Human relationships and expertise are at the core of our approach – because technology without people is limited. People behind it, in front of it, elevating it, and propelling it forward. We value the human effort of IT because we live and thrive in the relentless curiosity and imperative change of today&apos;s world.
+                    Our platform connects people, projects, and payments — bringing clarity and alignment to the complex work of building digital solutions.
                   </p>
                 </div>
               </ScrollAnimation>
-              <ScrollAnimation direction="right" delay={0.4} duration={0.8}>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-4 font-poppins">Our Impact</h3>
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">500+</div>
-                      <div className="text-blue-100">Happy Clients</div>
+
+              {/* Control costs */}
+              <ScrollAnimation direction="up" delay={0.5} duration={0.8}>
+                <div className="text-center">
+                  <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl p-8 mb-6 h-64 flex items-center justify-center">
+                    <div className="text-6xl">💰</div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 font-poppins">
+                    Control project costs.
+                  </h3>
+                  <p className="text-lg text-gray-700 font-inter">
+                    When we help businesses work smarter, we all benefit — with better solutions, stronger infrastructure, cleaner processes, and thriving communities.
+                  </p>
+                </div>
+              </ScrollAnimation>
+            </div>
+
+            <ScrollAnimation direction="up" delay={0.6} duration={0.8}>
+              <div className="text-center mt-16">
+                <p className="text-xl text-gray-700 font-inter">
+                  We&apos;re not here to create another tool that solves a single problem. We&apos;re building the modern technology operating system.
+                </p>
+              </div>
+            </ScrollAnimation>
+          </section>
+        </ScrollAnimation>
+
+        {/* Customer Success Stories */}
+        <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
+          <section className="py-20 bg-gray-50">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6 font-poppins">
+                Top companies run their business with MIRSSA TECH.
+              </h2>
+            </div>
+
+            {/* Customer Story */}
+            <ScrollAnimation direction="left" delay={0.3} duration={0.8}>
+              <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                        <span className="text-2xl">🏢</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 font-poppins">TechCorp Solutions</h3>
+                        <p className="text-gray-600 font-inter">Enterprise Client</p>
+                      </div>
                     </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">50+</div>
-                      <div className="text-blue-100">Technology Partners</div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4 font-poppins">
+                      How One of the Southeast&apos;s Premier Tech Companies Fuels Their Rapid Expansion with MIRSSA TECH
+                    </h4>
+                    <div className="flex items-center text-blue-600 font-medium mb-4">
+                      <span>Read more</span>
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
                     </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">10+</div>
-                      <div className="text-blue-100">Years in Business</div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="text-gray-500">Company profile</span>
+                        <p className="font-semibold">185 employees</p>
+                      </div>
+                      <div>
+                        <span className="text-gray-500">Working in</span>
+                        <p className="font-semibold">Florida, Kentucky, North Carolina</p>
+                      </div>
                     </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-6 text-white">
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">25+</div>
-                      <div className="text-blue-100">Countries Served</div>
+                      <div className="text-4xl mb-4">💬</div>
+                      <blockquote className="text-lg italic mb-4">
+                        &ldquo;I went on my first vacation in years thanks to MIRSSA TECH.&rdquo;
+                      </blockquote>
+                      <div className="text-center">
+                        <p className="font-bold">Sarah Johnson</p>
+                        <p className="text-blue-100">CTO, TechCorp Solutions</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </ScrollAnimation>
+              </div>
+            </ScrollAnimation>
+
+            {/* Another Testimonial */}
+            <ScrollAnimation direction="right" delay={0.4} duration={0.8}>
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">📊</div>
+                  <blockquote className="text-2xl font-bold text-gray-900 mb-4 font-poppins">
+                    &ldquo;95% of the manual calculations we had to do before are now automated by MIRSSA TECH. That is a game-changer.&rdquo;
+                  </blockquote>
+                  <div className="text-center">
+                    <p className="font-bold text-lg">Lisa Rodriguez</p>
+                    <p className="text-gray-600">VP of Operations, DataFlow Inc.</p>
+                  </div>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </section>
+        </ScrollAnimation>
+
+        {/* US-based Support */}
+        <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
+          <section className="py-20">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6 font-poppins">
+                US-based R&D & support
+              </h2>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-8 font-poppins">
+                Homegrown support.
+              </h3>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
+                With our US-based R&D and support teams, you&apos;ll never have to worry about getting stuck on endless phone trees or passed around to different people around the globe.
+              </p>
+              <div className="mt-8">
+                <Link 
+                  href="/contact" 
+                  className="text-blue-600 hover:text-blue-700 font-medium font-inter"
+                >
+                  Learn more
+                </Link>
+              </div>
+            </div>
+
+            {/* Support Map Placeholder */}
+            <ScrollAnimation direction="fade" delay={0.3} duration={0.8}>
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-12 text-center">
+                <div className="text-6xl mb-4">🗺️</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-2 font-poppins">Our Global Presence</h4>
+                <p className="text-gray-600 font-inter">Serving clients worldwide with local expertise</p>
+              </div>
+            </ScrollAnimation>
+          </section>
+        </ScrollAnimation>
+
+        {/* CTA Section */}
+        <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
+          <section className="py-20">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6 font-poppins">
+                Interested in building a better digital world?
+              </h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors font-poppins text-lg"
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  href="/team" 
+                  className="border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors font-poppins text-lg"
+                >
+                  Meet Our Team
+                </Link>
+              </div>
             </div>
           </section>
         </ScrollAnimation>
 
-        {/* Size doesn't matter */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">
-              Size doesn&apos;t matter.
+        {/* Final CTA */}
+        <ScrollAnimation direction="up" delay={0.3} duration={0.8}>
+          <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-20 text-center text-white">
+            <h2 className="text-4xl font-bold mb-6 font-poppins">
+              Connect your business, technology, and growth.
             </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
-              We help organizations of all sizes succeed with custom digital transformation services and solutions for business, healthcare, government, and education, plus market verticals like retail, utilities, and financial services, to name a few.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto font-inter">
+              MIRSSA TECH is the missing piece that brings your projects, payments and people together, so you can build with confidence.
             </p>
-            <p className="text-lg text-gray-600 mt-4 font-inter">
-              Whether you&apos;re local, growing globally, or somewhere in between, we have the expertise and the scale to help you achieve your goals – and even exceed them.
-            </p>
-          </div>
-
-          {/* Values Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Customer-Centered</h3>
-              <p className="text-gray-600 text-sm font-inter">
-                Human relationships and expertise are at the core of our approach – people and technology pushing business forward.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Built for You</h3>
-              <p className="text-gray-600 text-sm font-inter">
-                We architect solutions that simplify the complex and meet your individual business needs and goals.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Right-Sized</h3>
-              <p className="text-gray-600 text-sm font-inter">
-                Sure, we&apos;re global, but we aren&apos;t so big we&apos;re impersonal. We&apos;re small enough to be nimble and keep simplicity in mind.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 font-poppins">Future-Focused</h3>
-              <p className="text-gray-600 text-sm font-inter">
-                We exist to help you reach your business potential and are dedicated to growth that meets your needs.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Values Matter */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">
-              Values matter.
-            </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
-              MIRSSA TECH LTD is founded on diversity, and our team reflects it. Our team members come from all walks of life and all corners of the world. We wouldn&apos;t have it any other way.
-            </p>
-            <p className="text-lg text-gray-600 mt-4 font-inter">
-              We&apos;re also committed to supporting local communities. We take pride in a culture that gives back to the community and promotes environmental sustainability.
-            </p>
-          </div>
-
-          {/* Core Values */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">We listen and collaborate with purpose.</h3>
-              <p className="text-gray-600 mb-4 font-inter">
-                <strong>We&apos;re prepared, proactive, and precise.</strong> We listen to understand your needs. And we believe in the power of collaboration to spark innovation and deliver results.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">We continuously learn.</h3>
-              <p className="text-gray-600 mb-4 font-inter">
-                <strong>We develop our talent.</strong> Continuous training is the norm, including engagements with strategic partners. We believe our never-stop-learning approach distinguishes us in a global marketplace.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 font-poppins">We provide Five-Star Service.</h3>
-              <p className="text-gray-600 mb-4 font-inter">
-                <strong>You can expect exceptional service.</strong> Our teams of certified sales, technical engineering, and global supply chain specialists are driven to please.
-              </p>
-            </div>
-          </div>
-
-          {/* Service Principles */}
-          <div className="mt-12 bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center font-poppins">Our Service Principles</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">1</div>
-                <h4 className="font-semibold text-gray-900 mb-2 font-poppins">Commitment</h4>
-                <p className="text-sm text-gray-600 font-inter">To provide high-quality service by maintaining a relationship based on trust, responsiveness, and flexibility.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">2</div>
-                <h4 className="font-semibold text-gray-900 mb-2 font-poppins">&ldquo;Consider-it-done&rdquo; approach</h4>
-                <p className="text-sm text-gray-600 font-inter">To support you through every stage of the delivery process.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">3</div>
-                <h4 className="font-semibold text-gray-900 mb-2 font-poppins">Proactive partnership</h4>
-                <p className="text-sm text-gray-600 font-inter">To take the initiative to understand your industry, business model, goals – anything necessary to develop valuable and relevant solutions.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">4</div>
-                <h4 className="font-semibold text-gray-900 mb-2 font-poppins">Openness</h4>
-                <p className="text-sm text-gray-600 font-inter">To collaborate and develop optimal, cost-effective, and relevant solutions for your needs.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">5</div>
-                <h4 className="font-semibold text-gray-900 mb-2 font-poppins">Focus on results</h4>
-                <p className="text-sm text-gray-600 font-inter">To create positive long-term, bottom-line outcomes by providing you with the capacity and IT infrastructure for extraordinary performance.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Expertise Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">
-              We lend our expertise. All 10-plus years of it.
-            </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto font-inter">
-              <strong>We&apos;re passionate about technology.</strong> Our subject matter experts and advisors bring a wealth of experience to every project. We want nothing more than to ensure you get the optimal digital transformation services and solutions for your organization, your budget, and your ambitions for the future.
-            </p>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
-          <section className="bg-blue-600 rounded-lg p-12 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4 font-poppins">
-              We have just the right amount of everything. Right in one place.
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 font-inter">
-              MIRSSA TECH LTD is the first choice for digital transformation solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors font-poppins"
-              >
-                START A CONVERSATION
-              </Link>
-              <Link 
-                href="/services" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors font-poppins"
-              >
-                VIEW OUR SERVICES
-              </Link>
-            </div>
+            <Link 
+              href="/contact" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors font-poppins text-lg"
+            >
+              Get a demo
+            </Link>
           </section>
         </ScrollAnimation>
       </div>

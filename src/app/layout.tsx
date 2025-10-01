@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Logo from "../components/Logo";
 import ServicesDropdown from "../components/ServicesDropdown";
+import TeamDropdown from "../components/TeamDropdown";
 import MobileServices from "../components/MobileServices";
 import Footer from "../components/Footer";
 
@@ -235,13 +236,15 @@ export default function RootLayout({
                   <Link href="/" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
                     Home
                   </Link>
-                  <Link href="/portfolio" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                  {/* <Link href="/portfolio" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
                     Portfolio
-                  </Link>
+                  </Link> */}
                   <ServicesDropdown />
+                 
                   <Link href="/about" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
                     About
                   </Link>
+                  <TeamDropdown />
                   <Link href="/contact" className="text-black hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
                     Contact
                   </Link>

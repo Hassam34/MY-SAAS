@@ -3,6 +3,7 @@ import Link from "next/link";
 import HeroSlider from "../components/HeroSlider";
 import ServicesInfographic from "../components/ServicesInfographic";
 import TrustedBy from "../components/TrustedBy";
+import ProductsShowcase from "../components/ProductsShowcase";
 import FeaturesSlider from "../components/FeaturesSlider";
 import ScrollAnimation from "../components/ScrollAnimation";
 
@@ -49,6 +50,9 @@ export default function Home() {
       <ScrollAnimation direction="up" delay={0.1} duration={0.8}>
         <TrustedBy />
       </ScrollAnimation>
+
+      {/* Products Showcase Section */}
+      <ProductsShowcase />
 
       {/* Features Slider Section */}
       <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
