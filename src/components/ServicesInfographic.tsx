@@ -209,6 +209,18 @@ const ServicesInfographic = () => {
     { x: 259.27033315575466, y: 287.77183566542800 }
   ];
 
+  // Pre-calculate text positions for each segment - positioned within the 800x800 viewBox
+  // These positions are calculated to align with the center of each segment and be clearly visible
+  const textPositions = [
+    { x: 400, y: 100 },      // Top segment - centered above (0°)
+    { x: 650, y: 200 },      // Top-right segment - to the right (51.4°)
+    { x: 700, y: 400 },      // Right segment - far right (102.9°)
+    { x: 650, y: 600 },      // Bottom-right segment - to the right (154.3°)
+    { x: 150, y: 600 },      // Bottom-left segment - to the left (205.7°)
+    { x: 100, y: 400 },      // Left segment - far left (257.1°)
+    { x: 150, y: 200 }       // Top-left segment - to the left (308.6°)
+  ];
+
   return (
     <section className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,13 +238,13 @@ const ServicesInfographic = () => {
         </ScrollAnimation>
 
         {/* Desktop Circle View */}
-        <div className="hidden md:flex justify-center ">
-          <div className="relative w-full max-w-6xl">
+        <div className="hidden md:flex justify-center items-center">
+          <div className="relative w-full max-w-4xl flex justify-center">
             <svg 
-              width="100%" 
+              width="800" 
               height="800" 
               viewBox="0 0 800 800" 
-              className="drop-shadow-lg "
+              className="drop-shadow-lg"
             >
               {/* Service segments - properly positioned complete circle */}
               {services.map((service, index) => {
@@ -292,22 +304,25 @@ const ServicesInfographic = () => {
                       </foreignObject>
                     </g>
                     
-                    {/* Service title - positioned well outside circle */}
+                    {/* Service title - positioned using calculated text positions */}
                     <foreignObject 
-                      x={iconX + (iconX > 400 ? 250 : -250) - 100} 
-                      y={iconY - 80} 
+                      x={textPositions[index].x - 100} 
+                      y={textPositions[index].y - 40} 
                       width="200" 
                       height="80"
                     >
                       <div 
-                        className={`text-xs font-medium transition-all duration-500 text-center ${
+                        className={`text-xs sm:text-sm font-medium transition-all duration-500 text-center px-3 py-2 rounded-lg ${
                           isHovered || isCurrentlyActive ? 'font-bold' : 'font-normal'
                         }`}
                         style={{
                           color: isHovered || isCurrentlyActive ? service.color : '#6b7280',
-                          opacity: isHovered || isCurrentlyActive ? 1 : 0.8,
+                          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                          border: `2px solid ${isHovered || isCurrentlyActive ? service.color : 'rgba(0, 0, 0, 0.1)'}`,
+                          boxShadow: isHovered || isCurrentlyActive ? `0 4px 12px ${service.color}40` : '0 2px 8px rgba(0, 0, 0, 0.1)',
+                          opacity: isHovered || isCurrentlyActive ? 1 : 0.9,
                           transform: isHovered || isCurrentlyActive ? 'scale(1.05)' : 'scale(1)',
-                          marginTop: [2,4, 5, 6, 3,7].includes(service.id) ? '20px' : '-3px',
+                          lineHeight: '1.2',
                         }}
                         dangerouslySetInnerHTML={{ __html: service.title }}
                       />

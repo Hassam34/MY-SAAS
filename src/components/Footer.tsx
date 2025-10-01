@@ -129,7 +129,7 @@ export default function Footer() {
                       Finance
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/industries/retail" className="text-gray-300 hover:text-white transition-colors text-sm">
                       Retail
                     </Link>
@@ -138,10 +138,10 @@ export default function Footer() {
                     <Link href="/industries/manufacturing" className="text-gray-300 hover:text-white transition-colors text-sm">
                       Manufacturing
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h4 className="text-sm font-medium text-gray-200 mb-2">Global</h4>
                 <ul className="space-y-2">
                   <li>
@@ -160,7 +160,7 @@ export default function Footer() {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function Footer() {
                 <p>London, United Kingdom</p>
               </div>
             </div>
-            <div>
+            {/* <div>
               <h4 className="text-sm font-semibold text-gray-200 mb-3">Newsroom & Media</h4>
               <ul className="space-y-2">
                 <li>
@@ -200,7 +200,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div>
               <h4 className="text-sm font-semibold text-gray-200 mb-3">Recognition</h4>
               <div className="space-y-2 text-sm text-gray-300">
